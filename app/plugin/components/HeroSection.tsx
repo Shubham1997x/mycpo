@@ -39,7 +39,7 @@ export default function HeroSection() {
                 className="h-8 sm:h-12 lg:h-14"
               />
 
-              <span className="heading-color text-lg sm:text-2xl lg:text-3xl">for</span>
+              <span className="heading-color text-3xl sm:text-4xl lg:text-5xl">for</span>
               <span className="flex items-center gap-1 sm:gap-2">
                 <img
                   src="https://woocommerce.com/wp-content/themes/woo/images/woo-logo.svg"

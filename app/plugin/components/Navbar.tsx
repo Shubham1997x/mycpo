@@ -47,13 +47,13 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center gap-3">
                         <a
                             href="#login"
-                            className="text-sm font-bold text-zinc-700  transition-colors px-8 py-3 rounded-md border border-black hover:bg-black hover:text-white scale-105"
+                            className="text-sm font-bold text-zinc-700  transition-colors px-6 py-1.5 rounded-md border border-black hover:bg-black hover:text-white scale-105"
                         >
                             Log In
                         </a>
                         <a
                             href="#signup"
-                            className="inline-flex items-center justify-center px-8 py-3 bg-black text-white rounded-md font-semibold text-sm hover:bg-zinc-800 transition-all hover:scale-105"
+                            className="inline-flex items-center justify-center px-6 py-2 bg-black text-white rounded-md font-semibold text-sm hover:bg-zinc-800 transition-all hover:scale-105"
                         >
                             Sign Up
                         </a>

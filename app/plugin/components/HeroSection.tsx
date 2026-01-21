@@ -62,7 +62,7 @@ export default function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl text-zinc-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+          <p className="text-base sm:text-md lg:text-md text-zinc-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
             Accept payments, process refunds, and manage your business directly from your dashboard. Secure, fast, and completely seamless.
           </p>
 

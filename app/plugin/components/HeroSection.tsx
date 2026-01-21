@@ -37,11 +37,28 @@ export default function HeroSection() {
             New: WooCommerce Subscriptions Support
           </div>
 
-          <h1 className="mb-6 text-[32px] sm:text-[48px] lg:text-[64px] font-bold leading-[1.1] tracking-tight text-zinc-900">
-            The Payment Gateway
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2ca3c9] to-blue-600">
-              Built for WooCommerce
+          <h1 className="mb-6 text-[32px] sm:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-zinc-900">
+            <span className="sr-only">The Payment Gateway Built for WooCommerce</span>
+            <span aria-hidden className="inline">
+              <span className="inline-flex items-center justify-center gap-3 align-middle">
+                <img
+                  src="/logo.svg"
+                  alt=""
+                  className="h-[34px] sm:h-[44px] lg:h-[56px] w-auto"
+                />
+                <span>Gateway</span>
+              </span>
+              <br />
+              <span className="inline-flex items-center justify-center gap-3 align-middle">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#2ca3c9] to-blue-600">
+                  Built for
+                </span>
+                <img
+                  src="/woo.svg"
+                  alt=""
+                  className="h-[30px] sm:h-[38px] lg:h-[48px] w-auto"
+                />
+              </span>
             </span>
           </h1>
 
@@ -52,7 +69,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
             <a
               href="#get-started"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-black text-white rounded-full font-semibold text-base hover:bg-zinc-800 transition-all hover:scale-105 shadow-lg shadow-black/20"
+              className="inline-flex items-center justify-center px-8 py-3 bg-black text-white rounded-md font-semibold text-base hover:bg-zinc-800 transition-all hover:scale-105 shadow-lg shadow-black/20"
             >
               Get Started
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,34 +78,12 @@ export default function HeroSection() {
             </a>
             <a
               href="#book-call"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-zinc-200 bg-white text-zinc-900 rounded-full font-semibold text-base hover:border-zinc-300 hover:bg-zinc-50 transition-all hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-3 border border-zinc-200 bg-white text-zinc-900 rounded-md font-semibold text-base hover:border-zinc-300 hover:bg-black hover:text-white transition-all hover:scale-105"
             >
               Book a Demo
             </a>
           </div>
 
-          {/* Social Proof */}
-          <div className="border-t border-zinc-100 pt-8 sm:pt-10">
-            <p className="text-sm text-zinc-500 mb-6 font-medium uppercase tracking-wider">Trusted by 10,000+ Stores for Secure Payments</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-6 h-6" />
-                <span className="font-bold text-lg">PCI Compliant</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Lock className="w-6 h-6" />
-                <span className="font-bold text-lg">AES-256</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-6 h-6" />
-                <span className="font-bold text-lg">Global</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CreditCard className="w-6 h-6" />
-                <span className="font-bold text-lg">Tokenized</span>
-              </div>
-            </div>
-          </div>
         </motion.div>
 
         <motion.div
@@ -103,42 +98,6 @@ export default function HeroSection() {
               alt="Plugin Dashboard Preview"
               className="w-full h-auto"
             />
-
-            {/* Floating Badge 1 */}
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 1, type: "spring" }}
-              className="absolute -right-4 top-10 bg-white p-3 rounded-xl shadow-xl border border-zinc-100 hidden lg:block"
-            >
-              <div className="flex items-center gap-3">
-                <div className="bg-green-100 p-2 rounded-full text-green-600">
-                  <ShieldCheck size={20} />
-                </div>
-                <div>
-                  <p className="text-xs text-zinc-500 font-medium">Security Status</p>
-                  <p className="text-sm font-bold text-zinc-900">Protected</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Floating Badge 2 */}
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 1.2, type: "spring" }}
-              className="absolute -left-4 bottom-10 bg-white p-3 rounded-xl shadow-xl border border-zinc-100 hidden lg:block"
-            >
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full text-blue-600">
-                  <Globe size={20} />
-                </div>
-                <div>
-                  <p className="text-xs text-zinc-500 font-medium">Integration</p>
-                  <p className="text-sm font-bold text-zinc-900">Seamless</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>

@@ -69,7 +69,7 @@ export default function GettingStartedSection() {
                     <p className="text-zinc-700">{step.description}</p>
 
                     {/* Desktop Time Badge */}
-                    <span className={`hidden md:inline-flex text-white absolute -top-3 ${index % 2 === 0 ? 'right-4' : 'left-4'} bg-zinc-900 text-white text-xs font-bold px-3 py-1 rounded-full`}>
+                    <span className={`hidden md:inline-flex text-white! absolute -top-3 ${index % 2 === 0 ? 'right-4' : 'left-4'} bg-zinc-900 text-white text-xs font-bold px-3 py-1 rounded-full`}>
                       {step.time}
                     </span>
                   </div>

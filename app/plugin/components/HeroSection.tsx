@@ -87,7 +87,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="relative max-w-5xl mx-auto"
+          className="relative max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -96,7 +96,7 @@ export default function HeroSection() {
             <img
               src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=2400&q=80"
               alt="Plugin Dashboard Preview"
-              className="w-full h-auto"
+              className="w-full h-[240px] sm:h-[320px] lg:h-[420px] object-cover object-top"
             />
           </div>
         </motion.div>

@@ -1,37 +1,62 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Globe, RefreshCw, CreditCard, Clock, TrendingUp, ShieldCheck, Zap, Server } from 'lucide-react';
+
 const benefits = [
-  'Accept international transactions from customers worldwide',
-  'Process refunds automatically from within WooCommerce',
-  'Capture prior authorized transactions',
-  'Save customer payment methods securely',
-  'Minimize costs with competitive rates',
-  'Streamline transactions with automated processing',
-  'Accelerate cash flow with fast payouts',
-  'Easy refunds processed directly in WooCommerce',
-  'Enhance security with tokenized payments',
-  'Scale your business with enterprise-grade infrastructure'
+  { icon: Globe, text: 'Accept international transactions from customers worldwide' },
+  { icon: RefreshCw, text: 'Process refunds automatically from within WooCommerce' },
+  { icon: Clock, text: 'Capture prior authorized transactions' },
+  { icon: CreditCard, text: 'Save customer payment methods securely' },
+  { icon: TrendingUp, text: 'Minimize costs with competitive rates' },
+  { icon: Zap, text: 'Streamline transactions with automated processing' },
+  { icon: TrendingUp, text: 'Accelerate cash flow with fast payouts' },
+  { icon: RefreshCw, text: 'Easy refunds processed directly in WooCommerce' },
+  { icon: ShieldCheck, text: 'Enhance security with tokenized payments' },
+  { icon: Server, text: 'Scale your business with enterprise-grade infrastructure' }
 ];
 
 export default function BenefitsSection() {
   return (
-    <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-0 pb-16 sm:pb-20 lg:pb-28" style={{ backgroundColor: '#FAFAFA' }}>
+    <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-28" style={{ backgroundColor: '#FAFAFA' }}>
       <div
         className="absolute inset-0 opacity-90 bg_img_dotted pointer-events-none"
       />
       <div className="relative w-full">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold heading-color mb-8 sm:mb-12 text-center">
-          Key <span className="accent-color">Features</span>
-        </h2>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6">
+            Everything You Need for <span className="text-[#2ca3c9]">Growth</span>
+          </h2>
+          <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
+            Powerful features designed to help you sell more and manage less.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <li
+            <motion.div
               key={index}
-              className="flex items-start gap-2 sm:gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              whileHover={{ y: -5 }}
+              className="bg-white p-6 rounded-xl border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
             >
-              <span className="text-2xl sm:text-3xl font-bold mt-0.5 sm:mt-1 accent-color shrink-0">✓</span>
-              <span className="heading-color text-sm sm:text-base">{benefit}</span>
-            </li>
+              <div className="w-12 h-12 rounded-lg bg-[#2ca3c9]/10 flex items-center justify-center mb-4 group-hover:bg-[#2ca3c9] transition-colors duration-300">
+                <benefit.icon className="w-6 h-6 text-[#2ca3c9] group-hover:text-white transition-colors duration-300" />
+              </div>
+              <p className="text-zinc-800 font-medium leading-relaxed group-hover:text-zinc-900">
+                {benefit.text}
+              </p>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

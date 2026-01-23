@@ -32,12 +32,12 @@ export default function ProductScreenshotsSection() {
                 to enter their payment details securely on your site.
               </p>
             </div>
-            <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
+            <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group shadow-md hover:shadow-xl transition-all duration-500 hover:border-accent-color/50">
               <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=500&fit=crop"
+                src="/payment.jpg"
                 alt="Payment Methods Selection"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
           </div>
@@ -45,12 +45,12 @@ export default function ProductScreenshotsSection() {
           {/* Checkout Process */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
+              <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group shadow-md hover:shadow-xl transition-all duration-500 hover:border-accent-color/50">
                 <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&h=500&fit=crop"
+                  src="/check.jpg"
                   alt="Checkout Screen"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -92,12 +92,12 @@ export default function ProductScreenshotsSection() {
                 or capture previously authorized transactions when ready.
               </p>
             </div>
-            <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
+            <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group shadow-md hover:shadow-xl transition-all duration-500 hover:border-accent-color/50">
               <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop"
+                src="/refund.jpg"
                 alt="Order Management"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
           </div>
@@ -105,12 +105,12 @@ export default function ProductScreenshotsSection() {
           {/* Payment Methods Management */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
+              <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group shadow-md hover:shadow-xl transition-all duration-500 hover:border-accent-color/50">
                 <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
+                  src="/saved.jpg"
                   alt="Payment Methods List"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -152,12 +152,12 @@ export default function ProductScreenshotsSection() {
                 available for use during checkout, making future purchases faster and more convenient.
               </p>
             </div>
-            <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
+            <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group shadow-md hover:shadow-xl transition-all duration-500 hover:border-accent-color/50">
               <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=500&fit=crop"
+                src="/adding.jpg"
                 alt="Add Payment Method"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function DetailedFeaturesSection() {
         "Mobile-friendly checkout with optimized input fields",
         "Show detailed error messages for better user experience"
       ],
-      image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=600&fit=crop",
+      image: "/modern.jpg",
       imageAlt: "Checkout Screen"
     },
     {
@@ -26,7 +26,7 @@ export default function DetailedFeaturesSection() {
         "Automatic transaction voids for uncaptured orders",
         "Full or partial refunds supported"
       ],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+      image: "/support.jpg",
       imageAlt: "Mobile Checkout",
       reverse: true
     },
@@ -39,7 +39,7 @@ export default function DetailedFeaturesSection() {
         "Add payment methods without going through checkout",
         "Customers can add nicknames for saved payment methods"
       ],
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop",
+      image: "/secure.jpg",
       imageAlt: "Payment Methods"
     }
   ];

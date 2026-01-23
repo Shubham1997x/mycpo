@@ -48,7 +48,7 @@ export default function ProductScreenshotsSection() {
               <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group shadow-md hover:shadow-xl transition-all duration-500 hover:border-accent-color/50">
                 <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
-                  src="/check.jpg"
+                  src="/checkout-1.jpg"
                   alt="Checkout Screen"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

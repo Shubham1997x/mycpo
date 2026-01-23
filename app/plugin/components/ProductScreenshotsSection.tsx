@@ -35,7 +35,7 @@ export default function ProductScreenshotsSection() {
             <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
               <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=500&fit=crop"
+                src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=500&fit=crop"
                 alt="Payment Methods Selection"
                 className="w-full h-full object-cover"
               />
@@ -48,7 +48,7 @@ export default function ProductScreenshotsSection() {
               <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
                 <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop"
+                  src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&h=500&fit=crop"
                   alt="Checkout Screen"
                   className="w-full h-full object-cover"
                 />
@@ -64,7 +64,7 @@ export default function ProductScreenshotsSection() {
               <p className="text-color mb-3 sm:mb-4 text-sm sm:text-base">
                 The checkout process keeps customers on your site throughout the entire payment flow. Customers can see
                 their order details, shipping information, and enter payment details all in one place. The form is optimized
-                  for both desktop and mobile devices with smart input formatting.
+                for both desktop and mobile devices with smart input formatting.
               </p>
               <p className="text-color text-sm sm:text-base">
                 <span className="heading-color">What's next:</span> After entering payment details, customers can choose
@@ -124,11 +124,11 @@ export default function ProductScreenshotsSection() {
               <p className="text-color mb-3 sm:mb-4 text-sm sm:text-base">
                 Customers can view all their saved payment methods in a unified "My Payments" section of their account.
                 Each saved method shows the card type, last four digits, expiration date, and can be set as the default
-                  payment method for future purchases.
+                payment method for future purchases.
               </p>
               <p className="text-color text-sm sm:text-base">
                 <span className="heading-color">What's next:</span> Customers can edit, delete, or add new payment
-                  methods from this page.
+                methods from this page.
               </p>
             </div>
           </div>
@@ -149,13 +149,13 @@ export default function ProductScreenshotsSection() {
               </p>
               <p className="text-color text-sm sm:text-base">
                 <span className="heading-color">What's next:</span> Once added, the payment method is immediately
-                  available for use during checkout, making future purchases faster and more convenient.
+                available for use during checkout, making future purchases faster and more convenient.
               </p>
             </div>
             <div className="relative w-full h-48 sm:h-64 lg:h-80 rounded-lg overflow-hidden border-2 border-zinc-300 group">
               <div className="absolute inset-0 bg-linear-to-br from-accent-color/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&h=500&fit=crop"
+                src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=500&fit=crop"
                 alt="Add Payment Method"
                 className="w-full h-full object-cover"
               />

@@ -29,12 +29,16 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-semibold mb-4">
-            <span className="relative flex h-2 w-2">
+          <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-[10px] sm:text-xs md:text-sm font-semibold mb-4 max-w-full mx-auto">
+            <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2ca3c9] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2ca3c9]"></span>
+              <span className="relative inline-flex rounded-full h-full w-full bg-[#2ca3c9]"></span>
             </span>
-            All-in-One • Processor + Gateway • No Gateway Fees
+            <span className="whitespace-nowrap">All-in-One</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="whitespace-nowrap">Processor + Gateway</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="whitespace-nowrap">No Gateway Fees</span>
           </div>
 
 

@@ -16,11 +16,13 @@ export default function ProductScreenshotsSection() {
           {/* Payment Methods Selection */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold heading-color mb-3 sm:mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 accent-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold heading-color mb-3 sm:mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2 leading-tight">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 accent-color shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
-                Choose Your <span className="accent-color">Payment</span> Method
+                <span className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  Choose Your <span className="accent-color">Payment</span> Method
+                </span>
               </h3>
               <p className="text-color mb-3 sm:mb-4 text-sm sm:text-base">
                 Customers can select from multiple payment options including credit cards, debit cards, and digital wallets.
@@ -55,11 +57,13 @@ export default function ProductScreenshotsSection() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h3 className="text-xl sm:text-2xl font-bold heading-color mb-3 sm:mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 accent-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold heading-color mb-3 sm:mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2 leading-tight">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 accent-color shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="accent-color">Seamless</span> Checkout Experience
+                <span className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  <span className="accent-color">Seamless</span> Checkout Experience
+                </span>
               </h3>
               <p className="text-color mb-3 sm:mb-4 text-sm sm:text-base">
                 The checkout process keeps customers on your site throughout the entire payment flow. Customers can see
@@ -76,11 +80,13 @@ export default function ProductScreenshotsSection() {
           {/* Order Items & Management */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold heading-color mb-3 sm:mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 accent-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold heading-color mb-3 sm:mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2 leading-tight">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 accent-color shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
-                Manage Orders & Process <span className="accent-color">Refunds</span>
+                <span className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  Manage Orders & Process <span className="accent-color">Refunds</span>
+                </span>
               </h3>
               <p className="text-color mb-3 sm:mb-4 text-sm sm:text-base">
                 Store administrators can view order items, process refunds, and capture authorized transactions directly from
@@ -115,11 +121,13 @@ export default function ProductScreenshotsSection() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h3 className="text-xl sm:text-2xl font-bold heading-color mb-3 sm:mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 accent-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold heading-color mb-3 sm:mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2 leading-tight">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 accent-color shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                 </svg>
-                View Saved <span className="accent-color">Payment</span> Methods
+                <span className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  View Saved <span className="accent-color">Payment</span> Methods
+                </span>
               </h3>
               <p className="text-color mb-3 sm:mb-4 text-sm sm:text-base">
                 Customers can view all their saved payment methods in a unified "My Payments" section of their account.
@@ -136,11 +144,13 @@ export default function ProductScreenshotsSection() {
           {/* Add Payment Method */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold heading-color mb-3 sm:mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 accent-color" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold heading-color mb-3 sm:mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2 leading-tight">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 accent-color shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                 </svg>
-                Add New <span className="accent-color">Payment</span> Methods
+                <span className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  Add New <span className="accent-color">Payment</span> Methods
+                </span>
               </h3>
               <p className="text-color mb-3 sm:mb-4 text-sm sm:text-base">
                 Customers can add new payment methods directly from their account page without going through checkout.

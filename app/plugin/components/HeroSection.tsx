@@ -91,14 +91,14 @@ export default function HeroSection() {
         <motion.div
           className="relative max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y:0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-white">
             <img
               src="/hero-hologram.png"
               alt="MyCPO eCommerce Payment Gateway"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-[400px] sm:h-[440px] lg:h-[440px] object-center"
             />
           </div>
         </motion.div>

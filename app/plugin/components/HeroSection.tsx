@@ -5,7 +5,7 @@ import { ShieldCheck, Lock, Globe, CreditCard } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-8"> {/* Added pt-20 for sticky navbar offset */}
+    <section className="relative overflow-hidden pt-4"> {/* Added pt-20 for sticky navbar offset */}
       <div
         className="absolute inset-0 opacity-80"
         style={{
@@ -29,13 +29,15 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-semibold mb-4">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2ca3c9] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2ca3c9]"></span>
             </span>
-            New: WooCommerce Subscriptions Support
+            All-in-One Processor + Gateway • No Gateway Fees
           </div>
+
+
 
           <h1 className="mb-6 text-[32px] sm:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-zinc-900">
             <span className="sr-only">The Payment Gateway Built for WooCommerce</span>
@@ -63,7 +65,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-base sm:text-md lg:text-md text-zinc-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
-            Accept payments, process refunds, and manage your business directly from your dashboard. Secure, fast, and completely seamless.
+            The all-in-one payments solution built for WooCommerce. Fast payouts, seamless checkout, and <strong>ZERO gateway fees</strong>. <strong>All risk levels welcome</strong>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-6">
@@ -87,16 +89,16 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="relative max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          className="relative max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y:0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-white">
             <img
-              src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=2400&q=80"
-              alt="Plugin Dashboard Preview"
-              className="w-full h-[240px] sm:h-[320px] lg:h-[420px] object-cover object-top"
+              src="/hero-hologram.png"
+              alt="MyCPO eCommerce Payment Gateway"
+              className="w-full h-full object-cover object-center"
             />
           </div>
         </motion.div>

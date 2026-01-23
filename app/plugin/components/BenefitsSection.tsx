@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 import { Globe, RefreshCw, CreditCard, Clock, TrendingUp, ShieldCheck, Zap, Server } from 'lucide-react';
 
 const benefits = [
+  { icon: Server, text: 'All-in-one processor + gateway - one portal, one support team' },
+  { icon: TrendingUp, text: 'Zero gateway fees' },
+  { icon: ShieldCheck, text: 'High-risk merchant friendly' },
   { icon: Globe, text: 'Accept international transactions from customers worldwide' },
   { icon: RefreshCw, text: 'Process refunds automatically from within WooCommerce' },
   { icon: Clock, text: 'Capture prior authorized transactions' },
   { icon: CreditCard, text: 'Save customer payment methods securely' },
-  { icon: TrendingUp, text: 'Minimize costs with competitive rates' },
   { icon: Zap, text: 'Streamline transactions with automated processing' },
   { icon: TrendingUp, text: 'Accelerate cash flow with fast payouts' },
-  { icon: RefreshCw, text: 'Easy refunds processed directly in WooCommerce' },
-  { icon: ShieldCheck, text: 'Enhance security with tokenized payments' },
-  { icon: Server, text: 'Scale your business with enterprise-grade infrastructure' }
+  { icon: RefreshCw, text: 'Easy refunds processed directly in WooCommerce' }
 ];
 
 export default function BenefitsSection() {

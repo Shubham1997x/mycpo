@@ -23,7 +23,7 @@ export default function FinalCTASection() {
             Ready to <span className="text-[#2ca3c9]!">Upgrade</span> Your Checkout?
           </h2>
           <p className="text-lg sm:text-xl text-white! mb-10 leading-relaxed">
-            Join thousands of WooCommerce success stories. Get fast payouts, reliable security, and a better experience for your customers.
+            Join thousands of WooCommerce success stories. Get fast payouts, reliable security, <strong>zero gateway fees</strong>, and a unified all-in-one solution that works for all risk levels.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

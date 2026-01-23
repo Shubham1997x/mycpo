@@ -7,24 +7,17 @@ export default function IntroductionSection() {
       <div className="relative w-full max-w-5xl mx-auto">
         <div className="mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold heading-color mb-4 sm:mb-6 text-left">
-            Easily and securely accept <span className="accent-color">credit cards</span>, debit cards, and ACH payments using MyCPO
+            The <span className="accent-color">All-in-One</span> Payment Solution for WooCommerce
           </h2>
-          <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-color max-w-4xl mb-6 sm:mb-8 text-left">
+          <div className="space-y-4 text-sm sm:text-base text-color max-w-4xl mb-6 sm:mb-8 text-left leading-relaxed">
             <p>
-              The MyCPO extension provides one of the most <strong>advanced</strong> payment integrations for WooCommerce
-              while providing the <strong>security</strong> and <strong>reliability</strong> that comes with using MyCPO for payment processing.
-              Let your customers save their payment methods for <strong>fast and easy</strong> checkout. Includes <strong>full support for WooCommerce Subscriptions</strong> and <strong>WooCommerce Pre-Orders</strong>. Start using the most advanced WooCommerce payment gateway today!
+              Stop juggling separate processors and gateways. <strong>MyCPO combines both</strong> into a single, powerful platform. That means <strong>one login</strong>, <strong>one support team</strong>, and <strong>zero gateway fees</strong>.
             </p>
             <p>
-              <strong>MyCPO</strong> is one of the most <strong>popular</strong> payment processors around for a reason:
-              they offer <strong>easy, safe, and affordable</strong> credit card and ACH processing. This MyCPO payment gateway integration lets
-              you take advantage of several features offered by MyCPO, such as <strong>customer profiles</strong>, <strong>card tokenization</strong>, and <strong>ACH processing</strong>.
+              Designed for reliability, MyCPO offers <strong>enterprise-grade security</strong> and seamless integration. Whether you run a standard store or a <strong>high-risk business</strong>, we provide the stable processing you need.
             </p>
             <p>
-              The MyCPO Payment Gateway extension allows you to keep the customer on your site for the checkout process,
-              allowing you <strong>maximum control</strong> over checkout so that you can test and implement the most <strong>effective experience</strong> for your store.
-              An <strong>SSL is required</strong> for <strong>PCI compliance</strong> due to the direct checkout to ensure
-              that your customers' credit card information is <strong>secure</strong>.
+              Unlock a superior checkout experience with <strong>secure card storage</strong>, <strong>subscription support</strong>, and <strong>lightning-fast transactions</strong>—all managed directly from your WooCommerce dashboard.
             </p>
           </div>
         </div>
@@ -44,47 +37,54 @@ export default function IntroductionSection() {
                   className="h-6 sm:h-7 lg:h-8 brightness-0 invert"
                 />
               </h3>
-              <p className="text-zinc-200 mb-4 sm:mb-6 text-xs sm:text-sm leading-relaxed" style={{ color: '#e4e4e7' }}>
-                We're more than just a payment provider. We're your <strong>strategic partner</strong> in optimizing your payments stack for <strong>maximum growth</strong>.
-                Unlike many providers who focus solely on saving you money, we take a <strong>holistic approach</strong>.
+              <p className="text-zinc-200 mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed" style={{ color: '#e4e4e7' }}>
+                Most merchants pay double fees for separate processors and gateways. We fixed that with a <strong>unified solution</strong> that saves you money on every transaction.
               </p>
 
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl font-bold accent-color shrink-0">✓</span>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <span className="text-xl font-bold accent-color shrink-0 mt-0.5">✓</span>
                   <span className="text-white text-sm" style={{ color: '#ffffff' }}>
-                    <strong>Streamline Operations:</strong> Process refunds, capture transactions, and manage payments directly from WooCommerce
+                    <strong>Unified Power:</strong> Processor and gateway in one. No more complexity.
                   </span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl font-bold accent-color shrink-0">✓</span>
+                <div className="flex items-start gap-3">
+                  <span className="text-xl font-bold accent-color shrink-0 mt-0.5">✓</span>
                   <span className="text-white text-sm" style={{ color: '#ffffff' }}>
-                    <strong>Maximize Revenue:</strong> Enhance your payment stack to increase sales, boost AOV, and reduce failed payments
+                    <strong>Keep Your Profit:</strong> Zero gateway fees. Stop paying extra just to process payments.
                   </span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl font-bold accent-color shrink-0">✓</span>
+                <div className="flex items-start gap-3">
+                  <span className="text-xl font-bold accent-color shrink-0 mt-0.5">✓</span>
                   <span className="text-white text-sm" style={{ color: '#ffffff' }}>
-                    <strong>Protect Profits:</strong> Implement robust fraud prevention and chargeback management to safeguard your revenue
+                    <strong>Approval Guarantee:</strong> We support high-risk industries where others fail.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-xl font-bold accent-color shrink-0 mt-0.5">✓</span>
+                  <span className="text-white text-sm" style={{ color: '#ffffff' }}>
+                    <strong>Total Control:</strong> Handle refunds, captures, and subscriptions without leaving WooCommerce.
                   </span>
                 </div>
               </div>
 
-              <a
-                href="#get-started"
-                className="inline-flex items-center justify-center px-6 py-2 bg-white text-black rounded-md font-semibold text-sm hover:bg-zinc-100 transition-colors"
-              >
-                Get Started
-              </a>
+              <div className="text-center lg:text-left">
+                <a
+                  href="#get-started"
+                  className="inline-flex items-center justify-center px-6 py-2.5 bg-white text-black rounded-md font-bold text-sm hover:bg-zinc-100 transition-all hover:scale-105"
+                >
+                  Get Started Now
+                </a>
+              </div>
             </div>
 
             {/* Right Section - Image */}
-            <div className="relative w-full flex items-center justify-center">
-              <div className="w-full max-w-[250px] sm:max-w-[300px] h-[200px] sm:h-[250px] lg:h-[360px] rounded-xl overflow-hidden">
+            <div className="hidden lg:flex relative w-full items-center justify-center">
+              <div className="w-full max-w-[280px] h-[400px] rounded-xl">
                 <img
                   src="https://cdn.prod.website-files.com/66e98cd6e999927f01c3e4e3/66edf5d5f17b92c762ce593b_123312.avif"
-                  alt="MyCPO Feature"
-                  className="w-full h-full object-fit"
+                  alt="MyCPO Dashboard Interface"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>

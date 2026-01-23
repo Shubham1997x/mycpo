@@ -34,7 +34,7 @@ export default function HeroSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2ca3c9] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2ca3c9]"></span>
             </span>
-            All-in-One Processor + Gateway • No Gateway Fees
+            All-in-One • Processor + Gateway • No Gateway Fees
           </div>
 
 

@@ -80,9 +80,9 @@ export default function IntroductionSection() {
 
             {/* Right Section - Image */}
             <div className="hidden lg:flex relative w-full items-center justify-center">
-              <div className="w-full max-w-[280px] h-[400px] rounded-xl">
+              <div className="w-full max-w-[280px] h-[400px] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 bg-white">
                 <img
-                  src="https://cdn.prod.website-files.com/66e98cd6e999927f01c3e4e3/66edf5d5f17b92c762ce593b_123312.avif"
+                  src="/unified.jpg"
                   alt="MyCPO Dashboard Interface"
                   className="w-full h-full object-cover"
                 />

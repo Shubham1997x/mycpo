@@ -98,7 +98,7 @@ export default function HeroSection() {
             <img
               src="/hero-hologram.png"
               alt="MyCPO eCommerce Payment Gateway"
-              className="w-full h-[400px] sm:h-[440px] lg:h-[440px] object-center"
+              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-center"
             />
           </div>
         </motion.div>

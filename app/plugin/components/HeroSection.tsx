@@ -14,13 +14,6 @@ export default function HeroSection() {
           backgroundPosition: 'center',
         }}
       />
-
-      {/* Blue circular gradient */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#2ca3c9]/20 blur-[100px] pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-24">
         <motion.div
           className="text-center mb-8 sm:mb-12"
@@ -120,11 +113,11 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="relative rounded-xl overflow-hidden shadow-2xl border border-zinc-200 bg-white">
+          <div className="relative">
             <img
-              src="/hero-dashboard.png"
-              alt="MyCPO eCommerce Payment Gateway"
-              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-cover"
+              src="/MyCPO.png"
+              alt="MyCPO Secure Payment - WooCommerce Checkout Integration"
+              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-contain"
             />
           </div>
         </motion.div>

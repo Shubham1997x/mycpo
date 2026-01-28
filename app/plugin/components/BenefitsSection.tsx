@@ -62,12 +62,12 @@ export default function BenefitsSection() {
                 whileHover={{
                   backgroundColor: '#2ca3c9',
                   scale: 1.1,
-                  rotate: 5
+
                 }}
                 transition={{ type: 'spring', stiffness: 400 }}
               >
                 <motion.div
-                  whileHover={{ scale: 1.2, rotate: -5 }}
+                  whileHover={{ scale: 1.2 }}
                   transition={{ type: 'spring', stiffness: 400 }}
                 >
                   <benefit.icon className="w-6 h-6 text-[#2ca3c9] group-hover:text-white transition-colors duration-300" />

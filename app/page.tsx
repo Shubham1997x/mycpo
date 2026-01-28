@@ -6,17 +6,15 @@ import IntroductionSection from './plugin/components/IntroductionSection';
 import BenefitsSection from './plugin/components/BenefitsSection';
 import GettingStartedSection from './plugin/components/GettingStartedSection';
 import FinalCTASection from './plugin/components/FinalCTASection';
-import HowItWorksSection from './plugin/components/HowItWorksSection';
 
 export default function Home() {
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: '#FAFAFA' }}>
       <Navbar />
       <HeroSection />
-      <IntroductionSection />
-      <HowItWorksSection />
-      <BenefitsSection />
       <GettingStartedSection />
+      <IntroductionSection />
+      <BenefitsSection />
       <FinalCTASection />
     </div>
   );

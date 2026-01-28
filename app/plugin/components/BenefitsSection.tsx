@@ -41,17 +41,17 @@ export default function BenefitsSection() {
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8, y: 30 }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{
                 type: 'spring',
-                stiffness: 100,
-                damping: 15,
-                delay: 0.1
+                stiffness: 120,
+                damping: 20,
+                delay: 0.05
               }}
               whileHover={{
-                y: -10,
+                y: -5,
                 scale: 1.02,
                 boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)'
               }}

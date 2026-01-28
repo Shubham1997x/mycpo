@@ -75,7 +75,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <motion.a
               href="#get-started"
@@ -116,9 +116,9 @@ export default function HeroSection() {
 
         <motion.div
           className="relative max-w-5xl mx-auto"
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="relative rounded-xl overflow-hidden shadow-2xl border border-zinc-200 bg-white">
             <img

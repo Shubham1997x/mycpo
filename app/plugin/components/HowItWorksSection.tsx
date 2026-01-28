@@ -44,55 +44,46 @@ export default function HowItWorksSection() {
 
                 <div className="relative">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
-                        {steps.map((step, index) => {
-                            const directions = [
-                                { x: -100, y: 0 },  // from left
-                                { x: 0, y: -100 },  // from top
-                                { x: 100, y: 0 },   // from right
-                                { x: 0, y: 100 },   // from bottom
-                            ];
-                            const direction = directions[index % directions.length];
-
-                            return (
+                        {steps.map((step, index) => (
+                            <motion.div
+                                key={index}
+                                className="flex flex-col items-center relative"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-50px' }}
+                                transition={{
+                                    type: 'spring',
+                                    stiffness: 100,
+                                    damping: 20,
+                                    duration: 0.5,
+                                    delay: 0.1
+                                }}
+                                whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                            >
+                                {/* Placeholder visual block instead of real image */}
                                 <motion.div
-                                    key={index}
-                                    className="flex flex-col items-center relative"
-                                    initial={{ opacity: 0, x: direction.x, y: direction.y, scale: 0.8 }}
-                                    whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                                    viewport={{ once: true, margin: '-50px' }}
-                                    transition={{
-                                        type: 'spring',
-                                        stiffness: 100,
-                                        damping: 15,
-                                        delay: index * 0.2,
-                                    }}
-                                    whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                                    className="relative w-full aspect-4/3 mb-8 rounded-2xl overflow-hidden shadow-sm border border-zinc-200 bg-zinc-50 flex items-center justify-center"
+                                    whileHover={{ borderColor: '#2ca3c9', backgroundColor: '#f9fafb' }}
+                                    transition={{ duration: 0.2 }}
                                 >
-                                    {/* Placeholder visual block instead of real image */}
-                                    <motion.div
-                                        className="relative w-full aspect-4/3 mb-8 rounded-2xl overflow-hidden shadow-sm border border-zinc-200 bg-zinc-50 flex items-center justify-center"
-                                        whileHover={{ borderColor: '#2ca3c9', backgroundColor: '#f9fafb' }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        <div className="absolute inset-0 bg-linear-to-br from-zinc-100 to-zinc-200 opacity-80" />
-                                        <div className="relative z-10 px-4 py-2 rounded-md border border-zinc-300 bg-white/80 text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
-                                            Step preview
-                                        </div>
-                                    </motion.div>
-
-                                    <motion.h3
-                                        className="text-xl font-bold text-zinc-900 text-center"
-                                        initial={{ opacity: 0 }}
-                                        whileInView={{ opacity: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: index * 0.2 + 0.3 }}
-                                        whileHover={{ color: '#2ca3c9', scale: 1.05, transition: { duration: 0.2 } }}
-                                    >
-                                        {step.title}
-                                    </motion.h3>
+                                    <div className="absolute inset-0 bg-linear-to-br from-zinc-100 to-zinc-200 opacity-80" />
+                                    <div className="relative z-10 px-4 py-2 rounded-md border border-zinc-300 bg-white/80 text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
+                                        Step preview
+                                    </div>
                                 </motion.div>
-                            );
-                        })}
+
+                                <motion.h3
+                                    className="text-xl font-bold text-zinc-900 text-center"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 }}
+                                    whileHover={{ color: '#2ca3c9', scale: 1.05, transition: { duration: 0.2 } }}
+                                >
+                                    {step.title}
+                                </motion.h3>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -87,10 +87,10 @@ export default function IntroductionSection() {
             {/* Right Section - Image */}
             <motion.div
               className="hidden lg:flex relative w-full items-center justify-center"
-              initial={{ opacity: 0, x: 30, scale: 0.9 }}
+              initial={{ opacity: 0, x: 20, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
               <motion.div
                 className="w-full max-w-[280px] h-[400px] rounded-2xl overflow-hidden shadow-lg border border-zinc-100 bg-white group"

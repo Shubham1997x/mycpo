@@ -63,16 +63,16 @@ export default function GettingStartedSection() {
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{
                   type: 'spring',
-                  stiffness: 100,
-                  damping: 15,
-                  delay: 0.1
+                  stiffness: 120,
+                  damping: 20,
+                  delay: 0.05
                 }}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -5 }}
                 className="relative flex-1 flex flex-col items-center text-center group"
               >
                 {/* Timeline Dot */}
@@ -114,7 +114,7 @@ export default function GettingStartedSection() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
+                    transition={{ delay: 0.1 }}
                     whileHover={{ scale: 1.1, backgroundColor: '#2ca3c9' }}
                   >
                     {step.time}
@@ -124,7 +124,7 @@ export default function GettingStartedSection() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.25 }}
+                    transition={{ delay: 0.15 }}
                     whileHover={{ color: '#2ca3c9' }}
                   >
                     {step.title}
@@ -134,7 +134,7 @@ export default function GettingStartedSection() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
+                    transition={{ delay: 0.2 }}
                   >
                     {step.description}
                   </motion.p>

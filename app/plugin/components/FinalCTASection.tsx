@@ -26,21 +26,43 @@ export default function FinalCTASection() {
             Join thousands of WooCommerce success stories. Get fast payouts, reliable security, <strong>zero gateway fees</strong>, and a unified all-in-one solution that works for all risk levels.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <motion.a
               href="#get-started"
-              className="group relative inline-flex items-center justify-center px-8 py-3 bg-white text-black rounded-md font-bold text-lg hover:bg-zinc-100 transition-all hover:scale-105 min-w-[200px]"
+              className="group relative inline-flex items-center justify-center px-8 py-3 bg-white text-black rounded-md font-bold text-lg min-w-[200px]"
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400 }}
             >
               Install Now
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
+              <motion.div
+                whileHover={{ x: 5 }}
+                transition={{ type: 'spring', stiffness: 400 }}
+              >
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.div>
+            </motion.a>
+            <motion.a
               href="https://www.getmycpo.com"
-              className="inline-flex items-center justify-center px-8 py-3 border border-zinc-500 text-white! rounded-md font-bold text-lg hover:bg-zinc-800 hover:border-zinc-400 transition-all hover:scale-105 min-w-[200px]"
+              className="inline-flex items-center justify-center px-8 py-3 border border-zinc-500 text-white! rounded-md font-bold text-lg min-w-[200px]"
+              whileHover={{
+                scale: 1.05,
+                y: -3,
+                backgroundColor: 'rgba(39, 39, 42, 0.8)',
+                borderColor: 'rgba(161, 161, 170, 0.6)'
+              }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400 }}
             >
               Talk to Sales
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
           <p className="mt-8 text-white! text-sm">
             No credit card required for setup • 24/7 Support • Cancel anytime

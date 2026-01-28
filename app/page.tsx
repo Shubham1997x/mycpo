@@ -3,11 +3,10 @@
 import Navbar from './plugin/components/Navbar';
 import HeroSection from './plugin/components/HeroSection';
 import IntroductionSection from './plugin/components/IntroductionSection';
-import DetailedFeaturesSection from './plugin/components/DetailedFeaturesSection';
-import ProductScreenshotsSection from './plugin/components/ProductScreenshotsSection';
 import BenefitsSection from './plugin/components/BenefitsSection';
 import GettingStartedSection from './plugin/components/GettingStartedSection';
 import FinalCTASection from './plugin/components/FinalCTASection';
+import HowItWorksSection from './plugin/components/HowItWorksSection';
 
 export default function Home() {
   return (
@@ -15,8 +14,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <IntroductionSection />
-      <DetailedFeaturesSection />
-      <ProductScreenshotsSection />
+      <HowItWorksSection />
       <BenefitsSection />
       <GettingStartedSection />
       <FinalCTASection />

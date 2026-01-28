@@ -41,19 +41,44 @@ export default function BenefitsSection() {
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              whileHover={{ y: -5 }}
-              className="bg-white p-6 rounded-xl border border-zinc-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
+              initial={{ opacity: 0, scale: 0.8, y: 30 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{
+                type: 'spring',
+                stiffness: 100,
+                damping: 15,
+                delay: 0.1
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)'
+              }}
+              className="bg-white p-6 rounded-xl border border-zinc-100 shadow-sm group cursor-pointer"
             >
-              <div className="w-12 h-12 rounded-lg bg-[#2ca3c9]/10 flex items-center justify-center mb-4 group-hover:bg-[#2ca3c9] transition-colors duration-300">
-                <benefit.icon className="w-6 h-6 text-[#2ca3c9] group-hover:text-white transition-colors duration-300" />
-              </div>
-              <p className="text-zinc-800 font-medium leading-relaxed group-hover:text-zinc-900">
+              <motion.div
+                className="w-12 h-12 rounded-lg bg-[#2ca3c9]/10 flex items-center justify-center mb-4"
+                whileHover={{
+                  backgroundColor: '#2ca3c9',
+                  scale: 1.1,
+                  rotate: 5
+                }}
+                transition={{ type: 'spring', stiffness: 400 }}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: -5 }}
+                  transition={{ type: 'spring', stiffness: 400 }}
+                >
+                  <benefit.icon className="w-6 h-6 text-[#2ca3c9] group-hover:text-white transition-colors duration-300" />
+                </motion.div>
+              </motion.div>
+              <motion.p
+                className="text-zinc-800 font-medium leading-relaxed"
+                whileHover={{ color: '#1a1a1a' }}
+              >
                 {benefit.text}
-              </p>
+              </motion.p>
             </motion.div>
           ))}
         </div>

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,10 +34,10 @@ export default function Navbar() {
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
-                                className="text-sm lg:text-base font-medium text-zinc-600 hover:text-[#2ca3c9] transition-colors relative group"
+                                className="text-sm lg:text-base font-medium text-zinc-600 relative group hover:text-[#2ca3c9] transition-colors"
                             >
                                 {item}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#2ca3c9] transition-all duration-300 group-hover:w-full" />
+                                <span className="absolute -bottom-1 left-0 h-0.5 bg-[#2ca3c9] w-0 group-hover:w-full transition-all duration-300" />
                             </a>
                         ))}
                     </div>
@@ -47,13 +46,13 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center gap-3">
                         <a
                             href="#login"
-                            className="text-sm font-bold text-zinc-700  transition-colors px-6 py-1.5 rounded-md border border-black hover:bg-black hover:text-white scale-105"
+                            className="text-sm font-bold text-zinc-700 px-6 py-1.5 rounded-md border border-black hover:bg-black hover:text-white transition-colors"
                         >
                             Log In
                         </a>
                         <a
                             href="#signup"
-                            className="inline-flex items-center justify-center px-6 py-2 bg-black text-white rounded-md font-semibold text-sm hover:bg-zinc-800 transition-all hover:scale-105"
+                            className="inline-flex items-center justify-center px-6 py-2 bg-black text-white rounded-md font-semibold text-sm hover:bg-zinc-800 transition-colors"
                         >
                             Sign Up
                         </a>
@@ -71,46 +70,39 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu Overlay */}
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="fixed inset-0 top-[60px] bg-white z-40 md:hidden flex flex-col p-6 overflow-y-auto border-t border-zinc-100"
-                    >
-                        <div className="flex flex-col gap-6">
-                            {['Services', 'About', 'Partners', 'Contact', 'Blog'].map((item) => (
-                                <a
-                                    key={item}
-                                    href={`#${item.toLowerCase()}`}
-                                    onClick={() => setIsOpen(false)}
-                                    className="text-lg font-medium text-zinc-800 border-b border-zinc-100 pb-2"
-                                >
-                                    {item}
-                                </a>
-                            ))}
-                            <div className="flex flex-col gap-3 mt-4">
-                                <a
-                                    href="#login"
-                                    onClick={() => setIsOpen(false)}
-                                    className="w-full text-center py-3 border border-zinc-200 rounded-lg font-semibold text-zinc-700"
-                                >
-                                    Log In
-                                </a>
-                                <a
-                                    href="#signup"
-                                    onClick={() => setIsOpen(false)}
-                                    className="w-full text-center py-3 bg-black text-white rounded-lg font-semibold"
-                                >
-                                    Sign Up
-                                </a>
-                            </div>
+            {/* Mobile Menu Overlay (no animation) */}
+            {isOpen && (
+                <div className="fixed inset-0 top-[60px] bg-white z-40 md:hidden flex flex-col p-6 overflow-y-auto border-t border-zinc-100">
+                    <div className="flex flex-col gap-6">
+                        {['Services', 'About', 'Partners', 'Contact', 'Blog'].map((item) => (
+                            <a
+                                key={item}
+                                href={`#${item.toLowerCase()}`}
+                                onClick={() => setIsOpen(false)}
+                                className="text-lg font-medium text-zinc-800 border-b border-zinc-100 pb-2"
+                            >
+                                {item}
+                            </a>
+                        ))}
+                        <div className="flex flex-col gap-3 mt-4">
+                            <a
+                                href="#login"
+                                onClick={() => setIsOpen(false)}
+                                className="w-full text-center py-3 border border-zinc-200 rounded-lg font-semibold text-zinc-700"
+                            >
+                                Log In
+                            </a>
+                            <a
+                                href="#signup"
+                                onClick={() => setIsOpen(false)}
+                                className="w-full text-center py-3 bg-black text-white rounded-lg font-semibold"
+                            >
+                                Sign Up
+                            </a>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 }

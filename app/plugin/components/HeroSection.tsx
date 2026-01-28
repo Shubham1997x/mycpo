@@ -1,11 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, Lock, Globe, CreditCard } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-4"> {/* Added pt-20 for sticky navbar offset */}
+    <section className="relative overflow-hidden pt-4">
       <div
         className="absolute inset-0 opacity-80"
         style={{
@@ -56,7 +55,7 @@ export default function HeroSection() {
               </span>
               <br />
               <span className="inline-flex items-center justify-center gap-3 align-middle">
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#2ca3c9] to-blue-600">
+                <span >
                   Built for
                 </span>
                 <img
@@ -72,23 +71,46 @@ export default function HeroSection() {
             The all-in-one payments solution built for WooCommerce. Fast payouts, seamless checkout, and <strong>ZERO gateway fees</strong>. <strong>All risk levels welcome</strong>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-6">
-            <a
+          <motion.div
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <motion.a
               href="#get-started"
-              className="inline-flex items-center justify-center px-8 py-3 bg-black text-white rounded-md font-semibold text-base hover:bg-zinc-800 transition-all hover:scale-105 shadow-lg shadow-black/20"
+              className="inline-flex items-center justify-center px-8 py-3 bg-black text-white rounded-md font-semibold text-base shadow-lg shadow-black/20"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400 }}
             >
               Get Started
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <motion.svg
+                className="ml-2 w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                whileHover={{ x: 3 }}
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a
+              </motion.svg>
+            </motion.a>
+            <motion.a
               href="#book-call"
-              className="inline-flex items-center justify-center px-8 py-3 border border-zinc-200 bg-white text-zinc-900 rounded-md font-semibold text-base hover:border-zinc-300 hover:bg-black hover:text-white transition-all hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-3 border border-zinc-200 bg-white text-zinc-900 rounded-md font-semibold text-base"
+              whileHover={{
+                scale: 1.05,
+                y: -2,
+                backgroundColor: '#000',
+                color: '#fff',
+                borderColor: '#000'
+              }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400 }}
             >
               Book a Demo
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
         </motion.div>
 
@@ -98,11 +120,11 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-white">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl border border-zinc-200 bg-white">
             <img
-              src="/hero-hologram.png"
+              src="/hero-dashboard.png"
               alt="MyCPO eCommerce Payment Gateway"
-              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-center"
+              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-cover"
             />
           </div>
         </motion.div>

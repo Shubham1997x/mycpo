@@ -9,7 +9,7 @@ html {
   --background: #ffffff;
   --foreground: #171717;
   --heading-color: rgb(21, 21, 21);
-      --text-color: #151515;
+  --text-color: #151515;
   --accent-color: #2ca3c9;
 }
 
@@ -26,11 +26,18 @@ body {
   font-family: Inter, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--heading-color);
 }
 
-p, span, li, div {
+p,
+li,
+div {
   color: var(--text-color);
 }
 
@@ -93,40 +100,53 @@ p, span, li, div {
 
 /* Float animations for gradient orbs */
 @keyframes float-slow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
   }
+
   33% {
     transform: translate(-45%, -55%) scale(1.05);
   }
+
   66% {
     transform: translate(-55%, -45%) scale(0.95);
   }
 }
 
 @keyframes float-medium {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
   }
+
   50% {
     transform: translate(-55%, -45%) scale(1.1);
   }
 }
 
 @keyframes float-fast {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(50%, -50%) scale(1);
   }
+
   50% {
     transform: translate(45%, -55%) scale(1.15);
   }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.6;
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.2);

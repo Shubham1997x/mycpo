@@ -3,8 +3,7 @@
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import IntroductionSection from './components/IntroductionSection';
-import DetailedFeaturesSection from './components/DetailedFeaturesSection';
-import ProductScreenshotsSection from './components/ProductScreenshotsSection';
+import HowItWorksSection from './components/HowItWorksSection';
 import BenefitsSection from './components/BenefitsSection';
 import GettingStartedSection from './components/GettingStartedSection';
 import FinalCTASection from './components/FinalCTASection';
@@ -15,8 +14,7 @@ export default function PluginPage() {
       <Navbar />
       <HeroSection />
       <IntroductionSection />
-      <DetailedFeaturesSection />
-      <ProductScreenshotsSection />
+      <HowItWorksSection />
       <BenefitsSection />
       <GettingStartedSection />
       <FinalCTASection />

@@ -1,25 +1,40 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Globe, RefreshCw, CreditCard, Clock, TrendingUp, Shield, Zap, Server } from 'lucide-react';
+import { 
+  Globe, 
+  ArrowCounterClockwise, 
+  CreditCard, 
+  Clock, 
+  Rocket, 
+  ShieldCheck, 
+  Lightning, 
+  Stack,
+  Wallet,
+  Coins,
+  SquaresFour,
+  Robot,
+  ArrowUpRight,
+  ArrowCounterClockwise as Undo
+} from 'phosphor-react';
 
 const featuredBenefits = [
   {
-    icon: Server,
+    icon: Stack,
     title: 'All-in-One Solution',
     description: 'Unified processor + gateway. One portal, one support team, zero complexity.',
     iconColor: 'text-[#2ca3c9]',
     featured: true
   },
   {
-    icon: TrendingUp,
+    icon: Wallet,
     title: 'Zero Gateway Fees',
     description: 'Keep 100% of your profits. No hidden charges, no gateway markup.',
     iconColor: 'text-[#2ca3c9]',
     featured: true
   },
   {
-    icon: Shield,
+    icon: ShieldCheck,
     title: 'High-Risk Friendly',
     description: 'Approval guaranteed for industries others reject. All risk levels welcome.',
     iconColor: 'text-[#2ca3c9]',
@@ -29,14 +44,14 @@ const featuredBenefits = [
 
 const benefits = [
   { icon: Globe, text: 'Accept international transactions from customers worldwide', iconColor: 'text-[#2ca3c9]' },
-  { icon: RefreshCw, text: 'Process refunds automatically from within WooCommerce', iconColor: 'text-[#2ca3c9]' },
+  { icon: ArrowCounterClockwise, text: 'Process refunds automatically from within WooCommerce', iconColor: 'text-[#2ca3c9]' },
   { icon: Clock, text: 'Capture prior authorized transactions', iconColor: 'text-[#2ca3c9]' },
   { icon: CreditCard, text: 'Save customer payment methods securely', iconColor: 'text-[#2ca3c9]' },
-  { icon: Zap, text: 'Streamline transactions with automated processing', iconColor: 'text-[#2ca3c9]' },
-  { icon: TrendingUp, text: 'Accelerate cash flow with fast payouts', iconColor: 'text-[#2ca3c9]' },
-  { icon: RefreshCw, text: 'Easy refunds processed directly in WooCommerce', iconColor: 'text-[#2ca3c9]' },
-  { icon: Server, text: 'One portal, one support team for everything', iconColor: 'text-[#2ca3c9]' },
-  { icon: Globe, text: 'Multi-currency support for global sales', iconColor: 'text-[#2ca3c9]' },
+  { icon: Robot, text: 'Streamline transactions with automated processing', iconColor: 'text-[#2ca3c9]' },
+  { icon: Rocket, text: 'Accelerate cash flow with fast payouts', iconColor: 'text-[#2ca3c9]' },
+  { icon: Undo, text: 'Easy refunds processed directly in WooCommerce', iconColor: 'text-[#2ca3c9]' },
+  { icon: SquaresFour, text: 'One portal, one support team for everything', iconColor: 'text-[#2ca3c9]' },
+  { icon: Coins, text: 'Multi-currency support for global sales', iconColor: 'text-[#2ca3c9]' },
 ];
 
 export default function BenefitsSection() {
@@ -60,7 +75,7 @@ export default function BenefitsSection() {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-semibold mb-6"
           >
-            <Zap className="w-4 h-4" />
+            <Lightning className="w-4 h-4" />
             <span>Powerful Features</span>
           </motion.div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6">

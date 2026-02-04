@@ -64,7 +64,7 @@ export default function LegalDisclosureSection() {
                         <span className="flex h-6 w-6 shrink-0 items-center justify-center m-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-bold">
                             {index + 1}
                         </span>
-                        <p className="text-md sm:text-md text-zinc-600 leading-relaxed pt-0.5 wrap-break-word">{text}</p>
+                        <p className="text-sm sm:text-md text-zinc-600 leading-relaxed pt-0.5 wrap-break-word">{text}</p>
                     </motion.div>
                 ))}
             </motion.div>

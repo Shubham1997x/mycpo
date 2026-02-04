@@ -1,0 +1,127 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+export default function HeroSection() {
+  return (
+    <section className="relative overflow-hidden pt-4">
+      <div
+        className="absolute inset-0 opacity-80"
+        style={{
+          backgroundImage: 'url(/bg-footer.svg)',
+          backgroundSize: '100% 100%',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-24">
+        <motion.div
+          className="text-center mb-8 sm:mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-[10px] sm:text-xs md:text-sm font-semibold mb-4 max-w-full mx-auto">
+            <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2ca3c9] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-full w-full bg-[#2ca3c9]"></span>
+            </span>
+            <span className="whitespace-nowrap">All-in-One</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="whitespace-nowrap">Processor + Gateway</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="whitespace-nowrap">No Gateway Fees</span>
+          </div>
+
+
+
+          <h1 className="mb-6 text-[32px] sm:text-[48px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-zinc-900">
+            <span className="sr-only">The Payment Gateway Built for WooCommerce</span>
+            <span aria-hidden className="inline">
+              <span className="inline-flex items-center justify-center gap-3 align-middle">
+                <img
+                  src="/logo.svg"
+                  alt=""
+                  className="h-[34px] sm:h-[44px] lg:h-[56px] w-auto"
+                />
+                <span>Gateway</span>
+              </span>
+              <br />
+              <span className="inline-flex items-center justify-center gap-3 align-middle">
+                <span >
+                  Built for
+                </span>
+                <img
+                  src="/woo.svg"
+                  alt=""
+                  className="h-[30px] sm:h-[38px] lg:h-[48px] w-auto"
+                />
+              </span>
+            </span>
+          </h1>
+
+          <p className="text-base sm:text-md lg:text-md text-zinc-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+            The all-in-one payments solution built for WooCommerce. Fast payouts, seamless checkout, and <strong>ZERO gateway fees</strong>. <strong>All risk levels welcome</strong>.
+          </p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <motion.a
+              href="#get-started"
+              className="inline-flex items-center justify-center px-8 py-3 bg-black text-white rounded-md font-semibold text-base shadow-lg shadow-black/20"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400 }}
+            >
+              Get Started
+              <motion.svg
+                className="ml-2 w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                whileHover={{ x: 3 }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </motion.svg>
+            </motion.a>
+            <motion.a
+              href="#book-call"
+              className="inline-flex items-center justify-center px-8 py-3 border border-zinc-200 bg-white text-zinc-900 rounded-md font-semibold text-base"
+              whileHover={{
+                scale: 1.05,
+                y: -2,
+                backgroundColor: '#000',
+                color: '#fff',
+                borderColor: '#000'
+              }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 400 }}
+            >
+              Book a Demo
+            </motion.a>
+          </motion.div>
+
+        </motion.div>
+
+        <motion.div
+          className="relative max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="relative">
+            <img
+              src="/MyCPO.png"
+              alt="MyCPO Secure Payment - WooCommerce Checkout Integration"
+              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-contain"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

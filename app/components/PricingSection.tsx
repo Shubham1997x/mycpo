@@ -39,7 +39,7 @@ export default function PricingSection() {
                         <span>Unbeatable Value</span>
                     </motion.div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6">
-                        Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2ca3c9] to-[#1e8aa8]">myCPO</span>?
+                        Why Choose <span className="text-transparent bg-clip-text bg-linear-to-r from-[#2ca3c9] to-[#1e8aa8]">myCPO</span>?
                     </h2>
                     <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
                         Stop overpaying for standard payment gateways. Get more features for less.
@@ -75,7 +75,7 @@ export default function PricingSection() {
                         className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden relative"
                     >
                         {/* Decorative gradient blob */}
-                        <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-[#2ca3c9]/5 rounded-full blur-3xl -z-0" />
+                        <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-[#2ca3c9]/5 rounded-full blur-3xl z-0" />
 
                         {/* Asymmetric Grid Layout */}
                         <div className="grid grid-cols-1 md:grid-cols-5 relative z-10">

@@ -61,10 +61,10 @@ export default function LegalDisclosureSection() {
                         transition={{ duration: 0.35, delay: 0.05 * index, ease: 'easeOut' }}
                         className="flex items-start gap-3 p-3 sm:p-4 rounded-xl border border-zinc-200 bg-white shadow-sm hover:border-zinc-300 transition-colors min-w-0"
                     >
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-bold">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center m-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-bold">
                             {index + 1}
                         </span>
-                        <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed pt-0.5 break-words">{text}</p>
+                        <p className="text-sm sm:text-md text-zinc-600 leading-relaxed pt-0.5 wrap-break-word">{text}</p>
                     </motion.div>
                 ))}
             </motion.div>
@@ -98,7 +98,7 @@ export default function LegalDisclosureSection() {
                 transition={{ delay: 0.2 }}
                 className="max-w-4xl mx-auto text-center px-0 sm:px-2"
             >
-                <p className="text-[10px] sm:text-xs text-zinc-500 leading-relaxed break-words">
+                <p className="text-[10px] sm:text-xs text-zinc-500 leading-relaxed wrap-break-word">
                     myCPO is a payment gateway service provider. We facilitate payment processing but are not a bank or financial institution. All payment processing is subject to approval and compliance with applicable laws. For complete terms, please review our{' '}
                     <a href="#" className="text-[#2ca3c9] hover:underline font-medium">Terms of Service</a>,{' '}
                     <a href="#" className="text-[#2ca3c9] hover:underline font-medium">Privacy Policy</a>, and{' '}

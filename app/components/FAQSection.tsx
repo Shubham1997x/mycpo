@@ -52,7 +52,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3 sm:gap-4 text-left hover:bg-zinc-50 transition-colors duration-200 min-w-0"
             >
-                <span className="text-base sm:text-lg font-semibold text-zinc-900 flex-1 min-w-0 break-words pr-2">
+                <span className="text-base sm:text-lg font-semibold text-zinc-900 flex-1 min-w-0 wrap-break-word pr-2">
                     {question}
                 </span>
                 <motion.div
@@ -74,7 +74,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
                         className="overflow-hidden"
                     >
                         <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-1 sm:pt-2">
-                            <p className="text-sm sm:text-base text-zinc-600 leading-relaxed break-words">
+                            <p className="text-sm sm:text-base text-zinc-600 leading-relaxed wrap-break-word">
                                 {answer}
                             </p>
                         </div>

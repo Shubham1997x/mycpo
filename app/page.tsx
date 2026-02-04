@@ -1,11 +1,14 @@
 'use client';
 
-import Navbar from './plugin/components/Navbar';
-import HeroSection from './plugin/components/HeroSection';
-import IntroductionSection from './plugin/components/IntroductionSection';
-import BenefitsSection from './plugin/components/BenefitsSection';
-import GettingStartedSection from './plugin/components/GettingStartedSection';
-import FinalCTASection from './plugin/components/FinalCTASection';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import IntroductionSection from './components/IntroductionSection';
+import BenefitsSection from './components/BenefitsSection';
+import GettingStartedSection from './components/GettingStartedSection';
+import FinalCTASection from './components/FinalCTASection';
+import PricingSection from './components/PricingSection';
+import FAQSection from './components/FAQSection';
+import LegalDisclosureSection from './components/LegalDisclosureSection';
 
 export default function Home() {
   return (
@@ -15,6 +18,9 @@ export default function Home() {
       <GettingStartedSection />
       <IntroductionSection />
       <BenefitsSection />
+      <PricingSection />
+      <LegalDisclosureSection />
+      <FAQSection />
       <FinalCTASection />
     </div>
   );

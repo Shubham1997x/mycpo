@@ -51,7 +51,7 @@ export default function Navbar() {
                             Log In
                         </a>
                         <a
-                            href="#signup"
+                            href="/signup"
                             className="inline-flex items-center justify-center px-6 py-2 bg-black text-white rounded-md font-semibold text-sm hover:bg-zinc-800 transition-colors"
                         >
                             Sign Up
@@ -93,7 +93,7 @@ export default function Navbar() {
                                 Log In
                             </a>
                             <a
-                                href="#signup"
+                                href="/signup"
                                 onClick={() => setIsOpen(false)}
                                 className="w-full text-center py-3 bg-black text-white rounded-lg font-semibold"
                             >

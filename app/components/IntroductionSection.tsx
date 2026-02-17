@@ -75,12 +75,15 @@ export default function IntroductionSection() {
               </div>
 
               <div className="text-center lg:text-left">
-                <a
+                <motion.a
                   href="#get-started"
                   className="inline-flex items-center justify-center px-6 py-2.5 bg-white text-black rounded-md font-bold text-sm hover:bg-zinc-100 transition-colors"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: 'spring', stiffness: 400 }}
                 >
                   Get Started Now
-                </a>
+                </motion.a>
               </div>
             </div>
 

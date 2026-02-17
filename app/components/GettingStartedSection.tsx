@@ -151,7 +151,7 @@ export default function GettingStartedSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <p className="text-zinc-500 text-sm leading-relaxed text-left italic">
+            <p className="text-zinc-500 text-sm leading-relaxed text-left ">
               <span className="font-semibold">*</span> Your MyCPO merchant account must be approved before API credentials are issued. Unlike aggregators that approve instantly and review later, we complete underwriting and due diligence upfront — so once you're live, your account is fully verified and you won't face surprise holds, freezes, or interruptions.
             </p>
           </motion.div>

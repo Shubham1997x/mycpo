@@ -19,8 +19,8 @@ export default function Home() {
       <GettingStartedSection />
       <IntroductionSection />
       <BenefitsSection />
-      <WhyUsSection />
       <PricingSection />
+      <WhyUsSection />
       <FAQSection />
       <LegalDisclosureSection />
       <FinalCTASection />

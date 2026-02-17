@@ -308,11 +308,11 @@ export default function FAQSection() {
                             {category.faqs.map((faq, index) => {
                                 const itemId = `${categoryIndex}-${index}`;
                                 return (
-                                    <FAQItem
+                        <FAQItem
                                         key={itemId}
-                                        question={faq.question}
-                                        answer={faq.answer}
-                                        index={index}
+                            question={faq.question}
+                            answer={faq.answer}
+                            index={index}
                                         isOpen={expandedItems.has(itemId)}
                                         onToggle={() => {
                                             const newExpanded = new Set(expandedItems);

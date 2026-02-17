@@ -32,7 +32,7 @@ export default function GettingStartedSection() {
   ];
 
   return (
-    <section id="get-started" className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-28" className="bg-zinc-50">
+    <section id="get-started" className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-28 bg-zinc-50">
       <div className="relative w-full">
         <motion.div
           className="text-center mb-16"

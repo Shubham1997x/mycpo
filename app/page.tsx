@@ -6,6 +6,7 @@ import IntroductionSection from './components/IntroductionSection';
 import BenefitsSection from './components/BenefitsSection';
 import GettingStartedSection from './components/GettingStartedSection';
 import FinalCTASection from './components/FinalCTASection';
+import WhyUsSection from './components/WhyUsSection';
 import PricingSection from './components/PricingSection';
 import FAQSection from './components/FAQSection';
 import LegalDisclosureSection from './components/LegalDisclosureSection';
@@ -18,9 +19,10 @@ export default function Home() {
       <GettingStartedSection />
       <IntroductionSection />
       <BenefitsSection />
+      <WhyUsSection />
       <PricingSection />
-      <LegalDisclosureSection />
       <FAQSection />
+      <LegalDisclosureSection />
       <FinalCTASection />
     </div>
   );

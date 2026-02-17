@@ -6,7 +6,7 @@ export default function IntroductionSection() {
   const features = [
     { text: '<strong>Unified Power:</strong> Processor and gateway in one. No more complexity.' },
     { text: '<strong>Keep Your Profit:</strong> Zero gateway fees. Stop paying extra just to process payments.' },
-    { text: '<strong>Approval Guarantee:</strong> We support high-risk industries where others fail.' },
+    { text: '<strong>High Approval Rates:</strong> We support high-risk industries and a wide range of verticals where others can\'t.' },
     { text: '<strong>Total Control:</strong> Handle refunds, captures, and subscriptions without leaving WooCommerce.' }
   ];
 
@@ -39,7 +39,7 @@ export default function IntroductionSection() {
             {/* Left Section - Text Content (no text animations) */}
             <div className="text-white">
               <h3
-                className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3"
+                className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 flex items-center gap-3 sm:gap-4"
                 style={{ color: '#ffffff' }}
               >
                 <span style={{ color: '#ffffff' }}>Why</span>
@@ -53,7 +53,7 @@ export default function IntroductionSection() {
                 className="text-zinc-200 mb-6 sm:mb-8 text-xs sm:text-sm leading-relaxed"
                 style={{ color: '#e4e4e7' }}
               >
-                Most merchants pay double fees for separate processors and gateways. We fixed that with a <strong>unified solution</strong> that saves you money on every transaction.
+                Most merchants pay significantly higher fees for separate processors and gateways. We fixed that with a <strong>unified solution</strong> that saves you money on every transaction.
               </p>
 
               <div className="space-y-4 mb-8">

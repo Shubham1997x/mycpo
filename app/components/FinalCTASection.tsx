@@ -23,7 +23,7 @@ export default function FinalCTASection() {
             Ready to <span className="text-[#2ca3c9]!">Upgrade</span> Your Checkout?
           </h2>
           <p className="text-lg sm:text-xl text-white! mb-10 leading-relaxed">
-            Join thousands of WooCommerce success stories. Get fast payouts, reliable security, <strong>zero gateway fees</strong>, and a unified all-in-one solution that works for all risk levels.
+            Join WooCommerce merchants saving on every transaction. Get fast payouts, reliable security, <strong>zero gateway fees</strong>, and a unified all-in-one solution that works for all risk levels.
           </p>
 
           <motion.div
@@ -34,7 +34,7 @@ export default function FinalCTASection() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <motion.a
-              href="#get-started"
+              href="#"
               className="group relative inline-flex items-center justify-center px-8 py-3 bg-white text-black rounded-md font-bold text-lg min-w-[200px]"
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.98 }}
@@ -49,7 +49,7 @@ export default function FinalCTASection() {
               </motion.div>
             </motion.a>
             <motion.a
-              href="https://www.getmycpo.com"
+              href="#"
               className="inline-flex items-center justify-center px-8 py-3 border border-zinc-500 text-white! rounded-md font-bold text-lg min-w-[200px]"
               whileHover={{
                 scale: 1.05,
@@ -65,7 +65,7 @@ export default function FinalCTASection() {
           </motion.div>
 
           <p className="mt-8 text-white! text-sm">
-            No credit card required for setup • 24/7 Support • Cancel anytime
+            No setup fees • 24/7 Support • Transparent terms
           </p>
         </motion.div>
       </div>

@@ -1,14 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { 
-  Globe, 
-  ArrowCounterClockwise, 
-  CreditCard, 
-  Clock, 
-  Rocket, 
-  ShieldCheck, 
-  Lightning, 
+import {
+  Globe,
+  ArrowCounterClockwise,
+  CreditCard,
+  Clock,
+  Rocket,
+  ShieldCheck,
+  Lightning,
   Stack,
   Wallet,
   Coins,
@@ -36,7 +36,7 @@ const featuredBenefits = [
   {
     icon: ShieldCheck,
     title: 'High-Risk Friendly',
-    description: 'Approval guaranteed for industries others reject. All risk levels welcome.',
+    description: 'High approval rates for industries others reject\.We process a wide range of verticals and risk levels.',
     iconColor: 'text-[#2ca3c9]',
     featured: true
   },
@@ -51,7 +51,7 @@ const benefits = [
   { icon: Rocket, text: 'Accelerate cash flow with fast payouts', iconColor: 'text-[#2ca3c9]' },
   { icon: Undo, text: 'Easy refunds processed directly in WooCommerce', iconColor: 'text-[#2ca3c9]' },
   { icon: SquaresFour, text: 'One portal, one support team for everything', iconColor: 'text-[#2ca3c9]' },
-  { icon: Coins, text: 'Multi-currency support for global sales', iconColor: 'text-[#2ca3c9]' },
+  { icon: Coins, text: 'Comprehensive fraud & chargeback protection', iconColor: 'text-[#2ca3c9]' },
 ];
 
 export default function BenefitsSection() {

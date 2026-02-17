@@ -11,10 +11,10 @@ const complianceBadges = [
 ];
 
 const disclosures = [
-    'Transaction processing times may vary based on your merchant agreement. Standard payout schedule is 2-3 business days. Account approval required.',
-    'Processing rates vary by card type, transaction volume, and business category. Contact our sales team for custom pricing.',
-    'Merchants are responsible for chargebacks and disputes in accordance with card network rules. We provide tools to help manage and prevent chargebacks.',
-    'Service availability: While we strive for 99.9% uptime, myCPO is provided "as is" without warranty. We are not liable for lost revenue due to service interruptions.'
+    'Transaction processing times may vary based on your merchant agreement. Standard payout schedule is 1-3 business days. Merchant account approval required before processing.',
+    'Processing rates vary by card type, transaction volume,business category, and risk profile. Standard pricing is listed above. Contact our team for interchange-plus or custom pricing.',
+    'Merchants are responsible for chargebacks and disputes in accordance with card network rules. MyCPO provides tools and services to help manage and prevent chargebacks.',
+    'While we strive for 99.9% uptime, MyCPO is provided "as is" without warranty. We are not liable for lost revenue due to service interruptions.'
 ];
 
 export default function LegalDisclosureSection() {
@@ -61,7 +61,7 @@ export default function LegalDisclosureSection() {
                         transition={{ duration: 0.35, delay: 0.05 * index, ease: 'easeOut' }}
                         className="flex items-start gap-3 p-3 sm:p-4 rounded-xl border border-zinc-200 bg-white shadow-sm hover:border-zinc-300 transition-colors min-w-0"
                     >
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center m-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-bold">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center m-2 rounded-full bg-zinc-100 text-zinc-700 text-sm font-bold">
                             {index + 1}
                         </span>
                         <p className="text-sm sm:text-md text-zinc-600 leading-relaxed pt-0.5 wrap-break-word">{text}</p>
@@ -99,10 +99,10 @@ export default function LegalDisclosureSection() {
                 className="max-w-4xl mx-auto text-center px-0 sm:px-2"
             >
                 <p className="text-[10px] sm:text-xs text-zinc-500 leading-relaxed wrap-break-word">
-                    myCPO is a payment gateway service provider. We facilitate payment processing but are not a bank or financial institution. All payment processing is subject to approval and compliance with applicable laws. For complete terms, please review our{' '}
-                    <a href="#" className="text-[#2ca3c9] hover:underline font-medium">Terms of Service</a>,{' '}
-                    <a href="#" className="text-[#2ca3c9] hover:underline font-medium">Privacy Policy</a>, and{' '}
-                    <a href="#" className="text-[#2ca3c9] hover:underline font-medium">Merchant Agreement</a>.
+                    MyCPO is a payment gateway service provider. We facilitate payment processing but are not a bank or financial institution. All payment processing is subject to approval and compliance with applicable laws. For complete terms, please review our{' '}
+                    <a href="https://www.getmycpo.com/terms-of-service" target='_blank' rel='noopener noreferrer' className="text-[#2ca3c9] hover:underline font-medium">Terms of Service</a>,{' '}
+                    <a href="https://www.getmycpo.com/privacy-policy" target='_blank' rel='noopener noreferrer' className="text-[#2ca3c9] hover:underline font-medium">Privacy Policy</a>, and{' '}
+                    <a href="https://dashboard.maverickpayments.com/legal/merchant-agreement/v1.8" target="_blank" rel="noopener noreferrer" className="text-[#2ca3c9] hover:underline font-medium">Merchant Agreement</a>.
                 </p>
             </motion.div>
         </section>

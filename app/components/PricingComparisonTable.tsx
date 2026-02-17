@@ -26,12 +26,12 @@ export default function PricingComparisonTable() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mb-12 overflow-x-auto"
         >
-            <div className="min-w-[640px] bg-white rounded-xl border border-zinc-200 shadow-lg overflow-hidden">
+            <div className="min-w-[640px] bg-white rounded-xl border border-zinc-200 shadow-xl shadow-zinc-200/40 overflow-hidden">
                 {/* Table Header */}
                 <div className="grid grid-cols-4 bg-zinc-50 border-b border-zinc-200">
                     <div className="p-4 font-bold text-zinc-900"></div>
-                    <div className="p-4 text-center bg-[#2ca3c9]/5 border-x border-[#2ca3c9]/20">
-                        <div className="font-bold text-lg text-[#2ca3c9]">MyCPO</div>
+                    <div className="p-4 text-center bg-brand/5 border-x border-brand/20">
+                        <div className="font-bold text-lg text-brand">MyCPO</div>
                     </div>
                     <div className="p-4 text-center font-semibold text-zinc-700">Stripe</div>
                     <div className="p-4 text-center font-semibold text-zinc-700">Square</div>
@@ -46,10 +46,10 @@ export default function PricingComparisonTable() {
                         <div className="p-4 font-normal text-zinc-900 text-sm sm:text-base">{row.feature}</div>
 
                         {/* MyCPO Column */}
-                        <div className="p-4 text-center bg-[#2ca3c9]/5 border-x border-[#2ca3c9]/20">
+                        <div className="p-4 text-center bg-brand/5 border-x border-brand/20">
                             {typeof row.mycpo === 'boolean' ? (
                                 row.mycpo ? (
-                                    <Check className="w-5 h-5 text-[#2ca3c9] mx-auto" weight="bold" />
+                                    <Check className="w-5 h-5 text-brand mx-auto" weight="bold" />
                                 ) : (
                                     <X className="w-5 h-5 text-zinc-400 mx-auto" weight="bold" />
                                 )
@@ -57,15 +57,15 @@ export default function PricingComparisonTable() {
                                 <div className="flex items-center justify-center gap-2">
                                     {/* Shield icon for Data Breach Protection */}
                                     {row.feature === 'Data Breach Protection' && (
-                                        <ShieldCheck className="w-4 h-4 text-[#2ca3c9]" weight="bold" />
+                                        <ShieldCheck className="w-4 h-4 text-brand" weight="bold" />
                                     )}
                                     <span className="text-base sm:text-lg font-bold text-zinc-900">
                                         {row.mycpo}
-                                        {row.mycpoNote && <sup className="text-[#2ca3c9] ml-0.5 text-xs">{row.mycpoNote}</sup>}
+                                        {row.mycpoNote && <sup className="text-brand ml-0.5 text-xs">{row.mycpoNote}</sup>}
                                     </span>
                                     {/* Badge for "No additional fee" */}
                                     {row.feature === 'Manually Entered Cards' && row.mycpo === 'No additional fee' && (
-                                        <span className="ml-2 px-2 py-0.5 bg-[#2ca3c9] text-white text-[10px] font-bold rounded-full">
+                                        <span className="ml-2 px-2 py-0.5 bg-brand text-white text-[10px] font-bold rounded-full">
                                             FREE
                                         </span>
                                     )}

@@ -32,7 +32,7 @@ export default function GettingStartedSection() {
   ];
 
   return (
-    <section id="get-started" className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-28" style={{ backgroundColor: '#FAFAFA' }}>
+    <section id="get-started" className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 lg:py-28" className="bg-zinc-50">
       <div className="relative w-full">
         <motion.div
           className="text-center mb-16"
@@ -42,7 +42,7 @@ export default function GettingStartedSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 mb-4">
-            Get Started in <span className="text-[#2ca3c9]">5 Minutes</span>
+            Get Started in <span className="text-brand">5 Minutes</span>
           </h2>
           <p className="text-zinc-700 text-lg">
             No complex setup. No developer needed.
@@ -89,14 +89,14 @@ export default function GettingStartedSection() {
                   whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
                 >
                   <motion.div
-                    className="w-14 h-14 rounded-full bg-white border-4 border-[#2ca3c9] flex items-center justify-center shadow-lg"
-                    whileHover={{ borderColor: '#1a8ba8', boxShadow: '0 0 20px rgba(44, 163, 201, 0.4)' }}
+                    className="w-14 h-14 rounded-full bg-white border-4 border-brand flex items-center justify-center shadow-lg"
+                    whileHover={{ borderColor: 'var(--color-brand-dark)', boxShadow: '0 0 20px color-mix(in srgb, var(--color-brand) 40%, transparent)' }}
                   >
                     <motion.div
                       whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
                       transition={{ type: 'spring', stiffness: 400 }}
                     >
-                      <step.icon className="w-6 h-6 text-[#2ca3c9]" />
+                      <step.icon className="w-6 h-6 text-brand" />
                     </motion.div>
                   </motion.div>
                 </motion.div>
@@ -105,7 +105,7 @@ export default function GettingStartedSection() {
                 <motion.div
                   className="bg-white px-6 py-5 rounded-2xl shadow-sm border border-zinc-100 h-full flex flex-col items-center text-center"
                   whileHover={{
-                    borderColor: '#2ca3c9'
+                    borderColor: 'var(--color-brand)'
                   }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
@@ -115,7 +115,7 @@ export default function GettingStartedSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    whileHover={{ scale: 1.1, backgroundColor: '#2ca3c9' }}
+                    whileHover={{ scale: 1.1, backgroundColor: 'var(--color-brand)' }}
                   >
                     {step.time}
                   </motion.span>
@@ -125,7 +125,7 @@ export default function GettingStartedSection() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.15 }}
-                    whileHover={{ color: '#2ca3c9' }}
+                    whileHover={{ color: 'var(--color-brand)' }}
                   >
                     {step.title}
                   </motion.h3>

@@ -32,13 +32,13 @@ export default function LegalDisclosureSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-semibold mb-6"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-semibold mb-6"
                 >
                     <ShieldCheck className="w-4 h-4" />
                     <span>Trusted & Secure</span>
                 </motion.div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6">
-                    Legal <span className="text-[#2ca3c9]">Disclosure</span>
+                    Legal <span className="text-brand">Disclosure</span>
                 </h2>
                 <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
                     Transparent. Secure. Compliant.
@@ -85,7 +85,7 @@ export default function LegalDisclosureSection() {
                         transition={{ delay: 0.1 + index * 0.05 }}
                         className="flex items-center gap-2 text-xs sm:text-sm text-zinc-700 shrink-0"
                     >
-                        <badge.icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#2ca3c9] shrink-0" weight="bold" />
+                        <badge.icon className="w-4 h-4 sm:w-5 sm:h-5 text-brand shrink-0" weight="bold" />
                         <span className="font-medium whitespace-nowrap">{badge.label}</span>
                     </motion.div>
                 ))}
@@ -100,9 +100,9 @@ export default function LegalDisclosureSection() {
             >
                 <p className="text-[10px] sm:text-xs text-zinc-500 leading-relaxed wrap-break-word">
                     MyCPO is a payment gateway service provider. We facilitate payment processing but are not a bank or financial institution. All payment processing is subject to approval and compliance with applicable laws. For complete terms, please review our{' '}
-                    <a href="https://www.getmycpo.com/terms-of-service" target='_blank' rel='noopener noreferrer' className="text-[#2ca3c9] hover:underline font-medium">Terms of Service</a>,{' '}
-                    <a href="https://www.getmycpo.com/privacy-policy" target='_blank' rel='noopener noreferrer' className="text-[#2ca3c9] hover:underline font-medium">Privacy Policy</a>, and{' '}
-                    <a href="https://dashboard.maverickpayments.com/legal/merchant-agreement/v1.8" target="_blank" rel="noopener noreferrer" className="text-[#2ca3c9] hover:underline font-medium">Merchant Agreement</a>.
+                    <a href="https://www.getmycpo.com/terms-of-service" target='_blank' rel='noopener noreferrer' className="text-brand hover:underline font-medium">Terms of Service</a>,{' '}
+                    <a href="https://www.getmycpo.com/privacy-policy" target='_blank' rel='noopener noreferrer' className="text-brand hover:underline font-medium">Privacy Policy</a>, and{' '}
+                    <a href="https://dashboard.maverickpayments.com/legal/merchant-agreement/v1.8" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline font-medium">Merchant Agreement</a>.
                 </p>
             </motion.div>
         </section>

@@ -17,7 +17,7 @@ function PartnerNavbar() {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-[#FAFAFA] py-3 sm:py-4'}`}>
+        <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-zinc-50 py-3 sm:py-4'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center z-50">
@@ -31,10 +31,10 @@ function PartnerNavbar() {
                             <a
                                 key={item}
                                 href={`/#${item.toLowerCase()}`}
-                                className="text-sm lg:text-base font-medium text-zinc-600 relative group hover:text-[#2ca3c9] transition-colors"
+                                className="text-sm lg:text-base font-medium text-zinc-600 relative group hover:text-brand transition-colors"
                             >
                                 {item}
-                                <span className="absolute -bottom-1 left-0 h-0.5 bg-[#2ca3c9] w-0 group-hover:w-full transition-all duration-300" />
+                                <span className="absolute -bottom-1 left-0 h-0.5 bg-brand w-0 group-hover:w-full transition-all duration-300" />
                             </a>
                         ))}
                     </div>
@@ -86,13 +86,13 @@ function PartnerNavbar() {
 
 export default function PartnerSignupPage() {
     return (
-        <div className="min-h-screen relative overflow-x-hidden" style={{ backgroundColor: '#FAFAFA' }}>
+        <div className="min-h-screen relative overflow-x-hidden bg-zinc-50">
             <PartnerNavbar />
 
             <main className="relative pt-20 sm:pt-24 lg:pt-28">
                 {/* Background decorations */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2ca3c9]/5 rounded-full blur-3xl" />
+                    <div className="absolute top-1/4 -left-32 w-96 h-96 bg-brand/5 rounded-full blur-3xl" />
                     <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
                 </div>
 
@@ -109,7 +109,7 @@ export default function PartnerSignupPage() {
                             className="flex flex-col justify-center"
                         >
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[48px] font-bold leading-[1.1] tracking-tight text-zinc-900 mb-3 sm:mb-4">
-                                Welcome, <span className="text-[#2ca3c9]">Partner</span>
+                                Welcome, <span className="text-brand">Partner</span>
                             </h1>
 
                             <p className="text-base sm:text-lg text-zinc-600 mb-6 sm:mb-8">
@@ -122,17 +122,17 @@ export default function PartnerSignupPage() {
 
                                 {[
                                     {
-                                        icon: <Zap className="w-5 h-5 text-[#2ca3c9]" />,
+                                        icon: <Zap className="w-5 h-5 text-brand" />,
                                         title: 'Custom Pricing',
                                         description: 'Negotiated rates for your business'
                                     },
                                     {
-                                        icon: <Shield className="w-5 h-5 text-[#2ca3c9]" />,
+                                        icon: <Shield className="w-5 h-5 text-brand" />,
                                         title: 'Pre-Configured',
                                         description: 'Optimized settings ready to go'
                                     },
                                     {
-                                        icon: <Check className="w-5 h-5 text-[#2ca3c9]" />,
+                                        icon: <Check className="w-5 h-5 text-brand" />,
                                         title: 'Priority Support',
                                         description: 'Dedicated assistance when needed'
                                     },
@@ -159,7 +159,7 @@ export default function PartnerSignupPage() {
                             {/* Important Note */}
                             <div className="p-4 sm:p-5">
                                 <p className="text-xs sm:text-sm leading-relaxed text-zinc-700">
-                                    <span className="font-bold text-[#2ca3c9]">Note: </span>
+                                    <span className="font-bold text-brand">Note: </span>
                                     No credit pull until reviewed and e-signed.
                                 </p>
                             </div>
@@ -179,7 +179,7 @@ export default function PartnerSignupPage() {
                                 {/* Header with Gradient Accent */}
                                 <div className="relative px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-4 sm:pb-6 bg-gradient-to-br from-zinc-900 to-zinc-950 border-b border-zinc-800">
                                     {/* Subtle gradient orb */}
-                                    <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-br from-[#2ca3c9]/10 to-purple-500/10 rounded-full blur-3xl -z-10" />
+                                    <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-br from-brand/10 to-purple-500/10 rounded-full blur-3xl -z-10" />
 
                                     <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between gap-3 mb-2 sm:mb-3">
                                         <div className="flex-1">
@@ -190,17 +190,17 @@ export default function PartnerSignupPage() {
                                                 Quick & easy setup
                                             </p>
                                         </div>
-                                        <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-[#2ca3c9] rounded-full shadow-md shadow-[#2ca3c9]/20 flex-shrink-0">
+                                        <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-brand rounded-full shadow-md shadow-brand/20 flex-shrink-0">
                                             <span className="text-[10px] sm:text-xs font-bold text-white tracking-wide">PARTNER</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Pricing Callout */}
-                                <div className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 bg-gradient-to-r from-[#2ca3c9]/10 via-[#2ca3c9]/5 to-transparent border-b border-zinc-800">
+                                <div className="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 bg-gradient-to-r from-brand/10 via-brand/5 to-transparent border-b border-zinc-800">
                                     <div className="flex items-center gap-2 sm:gap-3">
                                         <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0">
-                                            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#2ca3c9]" />
+                                            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />
                                         </div>
                                         <div className="min-w-0">
                                             <p className="text-xs sm:text-sm font-semibold !text-white truncate">Custom Pricing</p>
@@ -212,7 +212,7 @@ export default function PartnerSignupPage() {
                                 {/* CTA Section - Minimal */}
                                 <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
                                     <div className="text-center">
-                                        <button className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#2ca3c9] text-white text-sm sm:text-base font-semibold rounded-lg sm:rounded-xl shadow-sm hover:shadow-sm hover:shadow-[#2ca3c9]/40 transition-all duration-300 hover:scale-105">
+                                        <button className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-brand text-white text-sm sm:text-base font-semibold rounded-lg sm:rounded-xl shadow-sm hover:shadow-sm hover:shadow-brand/40 transition-all duration-300 hover:scale-105">
                                             <span className="flex items-center justify-center gap-2">
                                                 Start Application
                                                 <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

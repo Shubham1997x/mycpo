@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
         <section className="relative py-24 bg-white overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-[#2ca3c9]/5 rounded-full blur-3xl opacity-50" />
+                <div className="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-brand/5 rounded-full blur-3xl opacity-50" />
                 <div className="absolute top-[40%] -left-[10%] w-[400px] h-[400px] bg-zinc-100 rounded-full blur-3xl opacity-50" />
             </div>
 
@@ -35,7 +35,7 @@ export default function HowItWorksSection() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-3xl sm:text-5xl font-bold text-zinc-900 mb-6">
-                        Easy to <span className="text-[#2ca3c9]">Use</span>
+                        Easy to <span className="text-brand">Use</span>
                     </h2>
                     <p className="text-lg text-zinc-600">
                         Get up and running in minutes. No complex configuration or coding required.
@@ -72,7 +72,7 @@ export default function HowItWorksSection() {
                                     {/* Placeholder visual block instead of real image */}
                                     <motion.div
                                         className="relative w-full aspect-4/3 mb-8 rounded-2xl overflow-hidden shadow-sm border border-zinc-200 bg-zinc-50 flex items-center justify-center"
-                                        whileHover={{ borderColor: '#2ca3c9', backgroundColor: '#f9fafb' }}
+                                        whileHover={{ borderColor: 'var(--color-brand)', backgroundColor: '#f9fafb' }}
                                         transition={{ duration: 0.2 }}
                                     >
                                         <div className="absolute inset-0 bg-linear-to-br from-zinc-100 to-zinc-200 opacity-80" />
@@ -87,7 +87,7 @@ export default function HowItWorksSection() {
                                         whileInView={{ opacity: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: 0.2 }}
-                                        whileHover={{ color: '#2ca3c9', scale: 1.05, transition: { duration: 0.2 } }}
+                                        whileHover={{ color: 'var(--color-brand)', scale: 1.05, transition: { duration: 0.2 } }}
                                     >
                                         {step.title}
                                     </motion.h3>

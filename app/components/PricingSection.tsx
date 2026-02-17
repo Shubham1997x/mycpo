@@ -9,9 +9,9 @@ import IdealMerchantProfiles from './IdealMerchantProfiles';
 
 export default function PricingSection() {
     return (
-        <section className="relative overflow-hidden w-full py-20 sm:py-24 lg:py-32 bg-white">
+        <section className="relative overflow-hidden w-full py-20 sm:py-24 lg:py-32 bg-zinc-50">
             {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#2ca3c9]/5 rounded-full blur-3xl -z-10" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/5 rounded-full blur-3xl -z-10" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -27,13 +27,13 @@ export default function PricingSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-semibold mb-6"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-semibold mb-6"
                     >
                         <Sparkle className="w-4 h-4" weight="fill" />
                         <span>Transparent Pricing</span>
                     </motion.div>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-4 sm:mb-6">
-                        Simple, <span className="text-[#2ca3c9]">Competitive</span> Pricing
+                        Simple, <span className="text-brand">Competitive</span> Pricing
                     </h2>
                     <p className="text-zinc-600 text-base sm:text-lg max-w-3xl mx-auto">
                         No hidden fees. No surprises. See exactly how MyCPO compares to other payment processors.

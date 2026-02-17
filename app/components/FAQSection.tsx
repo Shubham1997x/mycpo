@@ -160,7 +160,7 @@ function FAQItem({ question, answer, index, isOpen, onToggle }: {
             whileInView="visible"
             viewport={{ once: true, margin: '-24px' }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            className="bg-white rounded-xl border border-zinc-200 overflow-hidden hover:border-[#2ca3c9]/50 transition-colors duration-300 min-w-0"
+            className="bg-white rounded-xl border border-zinc-200 overflow-hidden hover:border-brand/50 transition-colors duration-300 min-w-0"
         >
             <button
                 onClick={onToggle}
@@ -174,7 +174,7 @@ function FAQItem({ question, answer, index, isOpen, onToggle }: {
                     transition={{ duration: 0.3 }}
                     className="shrink-0"
                 >
-                    <CaretDown className="w-5 h-5 text-[#2ca3c9]" weight="bold" />
+                    <CaretDown className="w-5 h-5 text-brand" weight="bold" />
                 </motion.div>
             </button>
 
@@ -228,7 +228,7 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-14 sm:py-16 lg:py-20 xl:py-28" style={{ backgroundColor: '#FAFAFA' }}>
+        <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-14 sm:py-16 lg:py-20 xl:py-28 bg-zinc-50">
             <div className="relative w-full min-w-0">
                 {/* Header */}
                 <motion.div
@@ -243,13 +243,13 @@ export default function FAQSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, ease: 'easeOut' }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-semibold mb-4 sm:mb-6"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-semibold mb-4 sm:mb-6"
                     >
                         <Question className="w-4 h-4 shrink-0" />
                         <span>Got Questions?</span>
                     </motion.div>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-4 sm:mb-6 px-1">
-                        Frequently Asked <span className="text-[#2ca3c9]">Questions</span>
+                        Frequently Asked <span className="text-brand">Questions</span>
                     </h2>
                     <p className="text-zinc-600 text-base sm:text-lg max-w-2xl mx-auto px-1">
                         Everything you need to know about pricing, contracts, approvals, and more.
@@ -274,8 +274,8 @@ export default function FAQSection() {
                                     setExpandedAll(false);
                                 }}
                                 className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl cursor-pointer font-semibold text-sm sm:text-base transition-all duration-200 ${activeCategory === category
-                                    ? 'bg-[#000000] text-white shadow-md'
-                                    : 'border border-zinc-300 text-zinc-700 hover:bg-[#2ca3c9] hover:text-white hover:border-[#2ca3c9]'
+                                    ? 'bg-black text-white shadow-md'
+                                    : 'border border-zinc-300 text-zinc-700 hover:bg-brand hover:text-white hover:border-brand'
                                     }`}
                             >
                                 {category}
@@ -287,7 +287,7 @@ export default function FAQSection() {
                     <div className="flex justify-center mt-6">
                         <button
                             onClick={handleExpandAll}
-                            className="text-[#2ca3c9] cursor-pointer font-semibold hover:underline transition-all duration-200 text-sm sm:text-base"
+                            className="text-brand cursor-pointer font-semibold hover:underline transition-all duration-200 text-sm sm:text-base"
                         >
                             {expandedAll ? 'Collapse All' : 'Expand All'}
                         </button>

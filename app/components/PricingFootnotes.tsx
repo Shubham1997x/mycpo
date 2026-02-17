@@ -20,9 +20,9 @@ export default function PricingFootnotes() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-5xl mx-auto mb-16 space-y-4 text-xs sm:text-sm text-zinc-600"
+            className="max-w-5xl mx-auto mb-20 sm:mb-24 space-y-4 text-xs sm:text-sm text-zinc-600"
         >
-            <p><sup className="text-[#2ca3c9] font-bold text-sm">¹</sup> Low-risk standard pricing shown. MyCPO determines the risk level of each merchant during underwriting based on business type, industry vertical, and related risk factors. High-risk merchants may be subject to adjusted transaction fees, additional monthly fees for enhanced risk monitoring, and/or modified terms. Final pricing — including any high-risk adjustments — will be confirmed prior to account activation, giving merchants the opportunity to review and accept terms or cancel before going live. MyCPO reserves the right to reclassify a merchant's risk level and/or pricing category based on processing performance, periodic risk reviews, and ongoing due diligence findings.</p>
+            <p><sup className="text-brand font-bold text-sm">¹</sup> Low-risk standard pricing shown. MyCPO determines the risk level of each merchant during underwriting based on business type, industry vertical, and related risk factors. High-risk merchants may be subject to adjusted transaction fees, additional monthly fees for enhanced risk monitoring, and/or modified terms. Final pricing — including any high-risk adjustments — will be confirmed prior to account activation, giving merchants the opportunity to review and accept terms or cancel before going live. MyCPO reserves the right to reclassify a merchant's risk level and/or pricing category based on processing performance, periodic risk reviews, and ongoing due diligence findings.</p>
 
             <p><sup className="text-zinc-500 font-bold text-sm">²</sup> Square's online transaction fee is 3.3% + $0.30 on their Free plan ($0/mo). The lower rate of 2.9% + $0.30 requires their Plus plan at $49/mo or Premium plan at $149/mo.</p>
 
@@ -30,10 +30,10 @@ export default function PricingFootnotes() {
 
             <div>
                 <p>
-                    <sup className="text-[#2ca3c9] font-bold text-sm">⁴</sup> Disputes involve multiple parties — the cardholder's issuing bank, the acquiring bank, card networks, and chargeback management teams — and fees apply at each stage:{' '}
+                    <sup className="text-brand font-bold text-sm">⁴</sup> Disputes involve multiple parties — the cardholder's issuing bank, the acquiring bank, card networks, and chargeback management teams — and fees apply at each stage:{' '}
                     <button
                         onClick={() => setDisputeFeesExpanded(!disputeFeesExpanded)}
-                        className="text-[#2ca3c9] hover:underline font-semibold"
+                        className="text-brand hover:underline font-semibold"
                     >
                         {disputeFeesExpanded ? 'Hide details' : 'View breakdown'}
                     </button>
@@ -46,7 +46,7 @@ export default function PricingFootnotes() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                 >
-                    <div className="mt-3 ml-4 border-l-2 border-zinc-200 pl-4">
+                    <div className="mt-4 rounded-xl border border-zinc-200 bg-white p-4 sm:p-5 shadow-md">
                         <table className="w-full text-xs">
                             <thead>
                                 <tr className="border-b border-zinc-200">
@@ -72,7 +72,7 @@ export default function PricingFootnotes() {
                 </motion.div>
             </div>
 
-            <p><sup className="text-[#2ca3c9] font-bold text-sm">⁵</sup> $100,000 in data breach protection included at no additional cost for PCI-compliant merchants. Merchant must maintain PCI DSS compliance to qualify for coverage. MyCPO provides resources and support to help merchants achieve and maintain PCI compliance.</p>
+            <p><sup className="text-brand font-bold text-sm">⁵</sup> $100,000 in data breach protection included at no additional cost for PCI-compliant merchants. Merchant must maintain PCI DSS compliance to qualify for coverage. MyCPO provides resources and support to help merchants achieve and maintain PCI compliance.</p>
         </motion.div>
     );
 }

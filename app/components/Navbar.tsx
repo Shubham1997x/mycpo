@@ -16,7 +16,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-[#FAFAFA] py-3 sm:py-4'}`}>
+        <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-zinc-50 py-3 sm:py-4'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
@@ -34,10 +34,10 @@ export default function Navbar() {
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
-                                className="text-sm lg:text-base font-medium text-zinc-600 relative group hover:text-[#2ca3c9] transition-colors"
+                                className="text-sm lg:text-base font-medium text-zinc-600 relative group hover:text-brand transition-colors"
                             >
                                 {item}
-                                <span className="absolute -bottom-1 left-0 h-0.5 bg-[#2ca3c9] w-0 group-hover:w-full transition-all duration-300" />
+                                <span className="absolute -bottom-1 left-0 h-0.5 bg-brand w-0 group-hover:w-full transition-all duration-300" />
                             </a>
                         ))}
                     </div>

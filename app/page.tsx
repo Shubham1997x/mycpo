@@ -13,7 +13,7 @@ import LegalDisclosureSection from './components/LegalDisclosureSection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative overflow-x-hidden" style={{ backgroundColor: '#FAFAFA' }}>
+    <div className="min-h-screen relative overflow-x-hidden bg-zinc-50">
       <Navbar />
       <HeroSection />
       <GettingStartedSection />

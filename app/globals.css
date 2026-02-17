@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand: #36D1FF;
+  --color-brand-dark: #1BA8E0;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
@@ -10,7 +15,7 @@ html {
   --foreground: #171717;
   --heading-color: rgb(21, 21, 21);
   --text-color: #151515;
-  --accent-color: #2ca3c9;
+  --accent-color: #36D1FF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -92,7 +97,7 @@ div {
 
 /* Gradient text effect */
 .text-gradient {
-  background: linear-gradient(135deg, #2ca3c9 0%, #8b5cf6 50%, #ec4899 100%);
+  background: linear-gradient(135deg, var(--color-brand) 0%, #8b5cf6 50%, #ec4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

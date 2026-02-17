@@ -17,7 +17,7 @@ export default function WhyUsSection() {
     return (
         <section className="relative overflow-hidden w-full py-20 sm:py-24 lg:py-32 bg-zinc-50/50">
             {/* Background Decorations */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#2ca3c9]/5 rounded-full blur-3xl -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand/5 rounded-full blur-3xl -z-10" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -33,13 +33,13 @@ export default function WhyUsSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2ca3c9]/10 text-[#2ca3c9] text-sm font-bold mb-6 ring-1 ring-[#2ca3c9]/20"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6 ring-1 ring-brand/20"
                     >
                         <Sparkle className="w-4 h-4" weight="fill" />
                         <span>Unbeatable Value</span>
                     </motion.div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 mb-6">
-                        Why Choose <span className="text-transparent bg-clip-text bg-linear-to-r from-[#2ca3c9] to-[#1e8aa8]">MyCPO</span>?
+                        Why Choose <span className="text-transparent bg-clip-text bg-linear-to-r from-brand to-brand-dark">MyCPO</span>?
                     </h2>
                     <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
                         Stop overpaying for standard payment gateways. Get more features for less.
@@ -60,7 +60,7 @@ export default function WhyUsSection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: 0.2 }}
-                        className="absolute top-0 right-2 sm:right-1/3 translate-x-0 sm:translate-x-1/2 -translate-y-1/2 bg-[#2ca3c9] text-white px-3 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-1.5 sm:gap-2 z-20"
+                        className="absolute top-0 right-2 sm:right-1/3 translate-x-0 sm:translate-x-1/2 -translate-y-1/2 bg-brand text-white px-3 py-1.5 sm:px-6 sm:py-2 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-1.5 sm:gap-2 z-20"
                     >
                         <Trophy weight="fill" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         BEST VALUE
@@ -75,7 +75,7 @@ export default function WhyUsSection() {
                         className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden relative"
                     >
                         {/* Decorative gradient blob */}
-                        <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-[#2ca3c9]/5 rounded-full blur-3xl z-0" />
+                        <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-brand/5 rounded-full blur-3xl z-0" />
 
                         {/* Asymmetric Grid Layout */}
                         <div className="grid grid-cols-1 md:grid-cols-12 relative z-10">
@@ -117,8 +117,8 @@ export default function WhyUsSection() {
                                             transition={{ delay: i * 0.05 }}
                                             className="flex items-start gap-3"
                                         >
-                                            <div className="w-5 h-5 rounded-full bg-[#2ca3c9]/10 flex items-center justify-center shrink-0 mt-0.5">
-                                                <Check className="w-3.5 h-3.5 text-[#2ca3c9]" weight="bold" />
+                                            <div className="w-5 h-5 rounded-full bg-brand/10 flex items-center justify-center shrink-0 mt-0.5">
+                                                <Check className="w-3.5 h-3.5 text-brand" weight="bold" />
                                             </div>
                                             <span className="text-sm font-semibold text-zinc-700">{feature}</span>
                                         </motion.div>
@@ -131,19 +131,19 @@ export default function WhyUsSection() {
                                         <h4 className="text-base sm:text-lg font-bold text-zinc-900 mb-3">Competitive Pricing</h4>
                                         <ul className="space-y-2">
                                             <li className="flex items-start gap-2 text-xs sm:text-sm text-zinc-700">
-                                                <Check className="w-4 h-4 text-[#2ca3c9] shrink-0 mt-0.5" weight="bold" />
+                                                <Check className="w-4 h-4 text-brand shrink-0 mt-0.5" weight="bold" />
                                                 <span>Custom & interchange-plus pricing available</span>
                                             </li>
                                             <li className="flex items-start gap-2 text-xs sm:text-sm text-zinc-700">
-                                                <Check className="w-4 h-4 text-[#2ca3c9] shrink-0 mt-0.5" weight="bold" />
+                                                <Check className="w-4 h-4 text-brand shrink-0 mt-0.5" weight="bold" />
                                                 <span>Volume discounts for growing businesses</span>
                                             </li>
                                             <li className="flex items-start gap-2 text-xs sm:text-sm text-zinc-700">
-                                                <Check className="w-4 h-4 text-[#2ca3c9] shrink-0 mt-0.5" weight="bold" />
+                                                <Check className="w-4 h-4 text-brand shrink-0 mt-0.5" weight="bold" />
                                                 <span>Free statement audit — we'll compare your current fees</span>
                                             </li>
                                             <li className="flex items-start gap-2 text-xs sm:text-sm text-zinc-700">
-                                                <Check className="w-4 h-4 text-[#2ca3c9] shrink-0 mt-0.5" weight="bold" />
+                                                <Check className="w-4 h-4 text-brand shrink-0 mt-0.5" weight="bold" />
                                                 <span>Meet-or-beat pricing guarantee</span>
                                             </li>
                                         </ul>

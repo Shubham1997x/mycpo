@@ -115,9 +115,9 @@ export default function HeroSection() {
         >
           <div className="relative">
             <img
-              src="/MyCPO.png"
+              src="/MyCPO-2.png"
               alt="MyCPO Secure Payment - WooCommerce Checkout Integration"
-              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-contain"
+              className="w-full h-[200px] sm:h-[440px] lg:h-[440px] object-cover"
             />
           </div>
         </motion.div>

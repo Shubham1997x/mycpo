@@ -12,7 +12,7 @@ export default function IdealMerchantProfiles() {
       transition={{ duration: 0.5, delay: 0.4 }}
       className="max-w-6xl mx-auto"
     >
-      <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-zinc-200 bg-white shadow-lg">
+      <div className="relative overflow-hidden  ">
 
 
         <div className="relative z-10 p-6 sm:p-10">

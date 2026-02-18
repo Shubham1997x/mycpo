@@ -26,7 +26,7 @@ export default function CustomPricingSection() {
             <div className="text-center mb-6">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10  text-sm font-semibold ring-1 ring-brand/20">
                     <Calculator className="w-4 h-4 " weight="bold" />
-                    Interchange-plus & volume discounts
+                    Interchange-Plus & Volume Discounts
                 </span>
             </div>
             <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-zinc-200 bg-white shadow-lg">

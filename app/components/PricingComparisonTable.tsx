@@ -1,9 +1,39 @@
 "use client";
 
+import type { ComponentType } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Check, X, ShieldCheck, Sparkle } from "phosphor-react";
+import {
+  Check,
+  X,
+  Shield,
+  Sparkle,
+  CreditCard,
+  Globe,
+  Plug,
+  CalendarBlank,
+  Wrench,
+  ArrowsClockwise,
+  ShieldCheck,
+  User,
+} from "phosphor-react";
 
-// Pricing comparison data
+const featureIcons: Record<
+  string,
+  ComponentType<{ className?: string; weight?: "bold" | "regular" }>
+> = {
+  "Card Transaction Fee": CreditCard,
+  "Manually Entered Cards": CreditCard,
+  "International Cards / Cross Border": Globe,
+  "Gateway Fee": Plug,
+  "Monthly Fee": CalendarBlank,
+  "Setup Fee": Wrench,
+  "Dispute & Chargeback Fees": ArrowsClockwise,
+  "High-Risk Support": ShieldCheck,
+  "Dedicated Account Manager": User,
+  "Data Breach Protection": Shield,
+};
+
 export const pricingRows = [
   {
     feature: "Card Transaction Fee",
@@ -89,20 +119,39 @@ export default function PricingComparisonTable() {
                 Features
               </span>
             </div>
-            <div className="px-6 py-4 flex items-center border-l border-zinc-600">
-              <span className="text-base font-bold text-white">MyCPO</span>
+            <div className="px-6 py-4 flex items-center border-l-2 border-t-2 border-r-2 border-l-brand border-t-brand border-r-brand bg-brand/10">
+              <Image
+                src="/logo.svg"
+                alt="MyCPO"
+                width={100}
+                height={28}
+                className="h-6 w-auto invert"
+              />
             </div>
             <div className="px-6 py-4 flex items-center border-l border-zinc-600">
-              <span className="text-base font-bold text-white">Stripe</span>
+              <Image
+                src="/stripe.svg"
+                alt="Stripe"
+                width={200}
+                height={56}
+                className="h-11 w-auto invert"
+              />
             </div>
             <div className="px-6 py-4 flex items-center border-l border-zinc-600">
-              <span className="text-base font-bold text-white">Square</span>
+              <Image
+                src="/square.png"
+                alt="Square"
+                width={200}
+                height={56}
+                className="h-11 w-auto object-contain invert"
+              />
             </div>
           </div>
 
           {pricingRows.map((row, index) => {
             const isEven = index % 2 === 0;
             const isSecurity = row.security;
+            const isLastRow = index === pricingRows.length - 1;
 
             return (
               <motion.div
@@ -116,7 +165,15 @@ export default function PricingComparisonTable() {
                                     ${isEven ? "bg-white" : "bg-zinc-50/70"}
                                 `}
               >
-                <div className="px-6 py-4 flex items-center border-r border-zinc-100">
+                <div className="px-6 py-4 flex items-center gap-3 border-r border-zinc-100">
+                  {featureIcons[row.feature] && (
+                    <span className="flex items-center justify-center w-8 h-8 shrink-0  text-zinc-600">
+                      {(() => {
+                        const Icon = featureIcons[row.feature];
+                        return <Icon className="w-4 h-4" weight="bold" />;
+                      })()}
+                    </span>
+                  )}
                   <span
                     className={`text-sm font-bold text-zinc-900 ${
                       isSecurity ? "text-emerald-900" : ""
@@ -127,15 +184,17 @@ export default function PricingComparisonTable() {
                 </div>
 
                 <div
-                  className={`px-6 py-4 flex items-center border-r border-zinc-100 min-h-[52px] bg-brand/8`}
+                  className={`px-6 py-4 flex items-center border-l-2 border-r-2 min-h-[52px] bg-brand/8 border-l-brand border-r-brand ${isLastRow ? "border-b-2 border-b-brand" : ""}`}
                 >
                   {typeof row.mycpo === "boolean" ? (
                     row.mycpo ? (
-                      <div className="flex items-center justify-center">
+                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand/15">
                         <Check className="w-4 h-4 text-brand" weight="bold" />
                       </div>
                     ) : (
-                      <X className="w-4 h-4 text-zinc-400" weight="bold" />
+                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
+                        <X className="w-4 h-4 text-zinc-400" weight="bold" />
+                      </div>
                     )
                   ) : (
                     <div className="flex items-center gap-2 flex-wrap">
@@ -175,7 +234,7 @@ export default function PricingComparisonTable() {
                 <div className="px-6 py-4 flex items-center border-r border-zinc-100 min-h-[52px]">
                   {typeof row.stripe === "boolean" ? (
                     row.stripe ? (
-                      <div className="flex items-center justify-center ">
+                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
                         <Check
                           className="w-4 h-4 text-zinc-600"
                           weight="bold"
@@ -183,7 +242,7 @@ export default function PricingComparisonTable() {
                       </div>
                     ) : (
                       <div className="flex items-center gap-1.5">
-                        <div className="flex items-center justify-center shrink-0">
+                        <div className="flex items-center justify-center w-8 h-8 shrink-0 rounded-full bg-zinc-100">
                           <X className="w-4 h-4 text-zinc-400" weight="bold" />
                         </div>
                         {row.stripeNote && (
@@ -208,14 +267,14 @@ export default function PricingComparisonTable() {
                 <div className="px-6 py-4 flex items-center min-h-[52px]">
                   {typeof row.square === "boolean" ? (
                     row.square ? (
-                      <div className="flex items-center justify-center">
+                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
                         <Check
                           className="w-4 h-4 text-zinc-600"
                           weight="bold"
                         />
                       </div>
                     ) : (
-                      <div className="flex items-center justify-center ">
+                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
                         <X className="w-4 h-4 text-zinc-400" weight="bold" />
                       </div>
                     )

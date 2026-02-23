@@ -18,6 +18,8 @@ import {
   User,
 } from "phosphor-react";
 
+const GRID_COLUMNS = "1.4fr 1.5fr 1fr 1fr";
+
 const featureIcons: Record<
   string,
   ComponentType<{ className?: string; weight?: "bold" | "regular" }>
@@ -33,6 +35,12 @@ const featureIcons: Record<
   "Dedicated Account Manager": User,
   "Data Breach Protection": Shield,
 };
+
+const headerLogos = [
+  { src: "/logo.svg", alt: "MyCPO", width: 120, height: 36, className: "h-10 w-auto invert", highlight: false },
+  { src: "/stripe.svg", alt: "Stripe", width: 200, height: 56, className: "h-11 w-auto invert", highlight: false },
+  { src: "/square.png", alt: "Square", width: 200, height: 56, className: "h-11 w-auto object-contain invert", highlight: false },
+];
 
 export const pricingRows = [
   {
@@ -98,6 +106,46 @@ export const pricingRows = [
   },
 ];
 
+function BooleanCell({ value, note, brand }: { value: boolean; note?: string; brand?: boolean }) {
+  const checkClass = brand ? "bg-brand/15 text-brand" : "bg-zinc-100 text-zinc-600";
+  const xClass = "bg-zinc-100 text-zinc-400";
+  if (value) {
+    return (
+      <div className={`flex items-center justify-center w-8 h-8 rounded-full ${checkClass}`}>
+        <Check className="w-4 h-4" weight="bold" />
+      </div>
+    );
+  }
+  return (
+    <div className="flex items-center gap-1.5">
+      <div className="flex items-center justify-center w-8 h-8 shrink-0 rounded-full bg-zinc-100">
+        <X className="w-4 h-4 text-zinc-400" weight="bold" />
+      </div>
+      {note && (
+        <span className="text-[10px] text-zinc-500 font-normal italic">{note}</span>
+      )}
+    </div>
+  );
+}
+
+function TextCell({
+  value,
+  note,
+  bold = false,
+}: {
+  value: string;
+  note?: string;
+  bold?: boolean;
+}) {
+  const noteClass = bold ? "text-brand" : "text-zinc-500";
+  return (
+    <span className={`text-sm ${bold ? "font-bold text-zinc-800" : "font-normal text-zinc-700"}`}>
+      {value}
+      {note && <sup className={`${noteClass} ml-0.5 text-[11px] font-normal`}>{note}</sup>}
+    </span>
+  );
+}
+
 export default function PricingComparisonTable() {
   return (
     <motion.div
@@ -109,49 +157,47 @@ export default function PricingComparisonTable() {
     >
       <div className="min-w-[640px]">
         <div className="rounded-xl border border-zinc-200 bg-white shadow-sm overflow-hidden">
-          {/* Header: solid dark, clear column separation */}
           <div
             className="grid border-b border-zinc-200 bg-zinc-800"
-            style={{ gridTemplateColumns: "1.4fr 1.5fr 1fr 1fr" }}
+            style={{ gridTemplateColumns: GRID_COLUMNS }}
           >
             <div className="px-6 py-4 flex items-center">
-              <span className="text-xs uppercase tracking-wider text-zinc-400 font-semibold">
+              <span className="text-sm uppercase tracking-wider text-zinc-400 font-semibold">
                 Features
               </span>
             </div>
-            <div className="px-6 py-4 flex items-center border-l-2 border-t-2 border-r-2 border-l-brand border-t-brand border-r-brand bg-brand/10">
-              <Image
-                src="/logo.svg"
-                alt="MyCPO"
-                width={100}
-                height={28}
-                className="h-6 w-auto invert"
-              />
-            </div>
-            <div className="px-6 py-4 flex items-center border-l border-zinc-600">
-              <Image
-                src="/stripe.svg"
-                alt="Stripe"
-                width={200}
-                height={56}
-                className="h-11 w-auto invert"
-              />
-            </div>
-            <div className="px-6 py-4 flex items-center border-l border-zinc-600">
-              <Image
-                src="/square.png"
-                alt="Square"
-                width={200}
-                height={56}
-                className="h-11 w-auto object-contain invert"
-              />
-            </div>
+            {headerLogos.map((logo) => (
+              <div
+                key={logo.alt}
+                className={`px-6 py-4 flex items-center justify-center border-l border-zinc-600 ${logo.highlight ? "bg-brand/10" : ""}`}
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  className={logo.className}
+                />
+              </div>
+            ))}
           </div>
 
           {pricingRows.map((row, index) => {
             const isEven = index % 2 === 0;
-            const isSecurity = row.security;
+            const isFirstRow = index === 0;
             const isLastRow = index === pricingRows.length - 1;
+            const FeatureIcon = featureIcons[row.feature];
+            const rowClasses = [
+              "grid border-b border-zinc-100 last:border-b-0",
+              isEven ? "bg-white" : "bg-zinc-50/70",
+            ].join(" ");
+            const mycpoCellClasses = [
+              "px-6 py-4 flex items-center border-l-2 border-r-2 min-h-[52px] bg-brand/8 border-l-brand border-r-brand -mb-px",
+              isFirstRow && "border-t-2 border-t-brand",
+              isLastRow && "border-b-2 border-b-brand",
+            ]
+              .filter(Boolean)
+              .join(" ");
 
             return (
               <motion.div
@@ -160,58 +206,38 @@ export default function PricingComparisonTable() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.25, delay: index * 0.02 }}
-                style={{ gridTemplateColumns: "1.4fr 1.5fr 1fr 1fr" }}
-                className={`grid border-b border-zinc-100 last:border-b-0
-                                    ${isEven ? "bg-white" : "bg-zinc-50/70"}
-                                `}
+                style={{ gridTemplateColumns: GRID_COLUMNS }}
+                className={rowClasses}
               >
                 <div className="px-6 py-4 flex items-center gap-3 border-r border-zinc-100">
-                  {featureIcons[row.feature] && (
-                    <span className="flex items-center justify-center w-8 h-8 shrink-0  text-zinc-600">
-                      {(() => {
-                        const Icon = featureIcons[row.feature];
-                        return <Icon className="w-4 h-4" weight="bold" />;
-                      })()}
+                  {FeatureIcon && (
+                    <span className="flex items-center justify-center w-8 h-8 shrink-0 text-zinc-600">
+                      <FeatureIcon className="w-4 h-4" weight="bold" />
                     </span>
                   )}
                   <span
-                    className={`text-sm font-bold text-zinc-900 ${
-                      isSecurity ? "text-emerald-900" : ""
-                    }`}
+                    className={`text-sm font-bold text-zinc-900 ${row.security ? "text-emerald-900" : ""}`}
                   >
                     {row.feature}
                   </span>
                 </div>
 
-                <div
-                  className={`px-6 py-4 flex items-center border-l-2 border-r-2 min-h-[52px] bg-brand/8 border-l-brand border-r-brand ${isLastRow ? "border-b-2 border-b-brand" : ""}`}
-                >
+                <div className={mycpoCellClasses}>
                   {typeof row.mycpo === "boolean" ? (
-                    row.mycpo ? (
-                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-brand/15">
-                        <Check className="w-4 h-4 text-brand" weight="bold" />
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
-                        <X className="w-4 h-4 text-zinc-400" weight="bold" />
-                      </div>
-                    )
+                    <BooleanCell value={row.mycpo} brand />
                   ) : (
                     <div className="flex items-center gap-2 flex-wrap">
-                      {isSecurity && (
+                      {row.security && (
                         <ShieldCheck
                           className="w-4 h-4 text-emerald-600 shrink-0"
                           weight="bold"
                         />
                       )}
-                      <span className="text-sm font-normal text-zinc-800">
-                        {row.mycpo}
-                        {row.mycpoNote && (
-                          <sup className="text-brand ml-0.5 text-[11px] font-normal">
-                            {row.mycpoNote}
-                          </sup>
-                        )}
-                      </span>
+                      <TextCell
+                        value={row.mycpo}
+                        note={row.mycpoNote}
+                        bold
+                      />
                       {row.feature === "Manually Entered Cards" &&
                         row.mycpo === "No additional fee" && (
                           <motion.span
@@ -220,10 +246,7 @@ export default function PricingComparisonTable() {
                             transition={{ delay: 0.3, type: "spring" }}
                             className="px-2 py-0.5 bg-brand/20 text-brand text-[10px] font-semibold rounded uppercase"
                           >
-                            <Sparkle
-                              className="w-2.5 h-2.5 inline mr-0.5"
-                              weight="fill"
-                            />
+                            <Sparkle className="w-2.5 h-2.5 inline mr-0.5" weight="fill" />
                             Free
                           </motion.span>
                         )}
@@ -233,60 +256,17 @@ export default function PricingComparisonTable() {
 
                 <div className="px-6 py-4 flex items-center border-r border-zinc-100 min-h-[52px]">
                   {typeof row.stripe === "boolean" ? (
-                    row.stripe ? (
-                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
-                        <Check
-                          className="w-4 h-4 text-zinc-600"
-                          weight="bold"
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-1.5">
-                        <div className="flex items-center justify-center w-8 h-8 shrink-0 rounded-full bg-zinc-100">
-                          <X className="w-4 h-4 text-zinc-400" weight="bold" />
-                        </div>
-                        {row.stripeNote && (
-                          <span className="text-[10px] text-zinc-500 font-normal italic">
-                            {row.stripeNote}
-                          </span>
-                        )}
-                      </div>
-                    )
+                    <BooleanCell value={row.stripe} note={row.stripeNote} />
                   ) : (
-                    <span className="text-sm font-normal text-zinc-700">
-                      {row.stripe}
-                      {row.stripeNote && (
-                        <sup className="text-zinc-500 ml-0.5 text-[11px] font-normal">
-                          {row.stripeNote}
-                        </sup>
-                      )}
-                    </span>
+                    <TextCell value={row.stripe} note={row.stripeNote} />
                   )}
                 </div>
 
                 <div className="px-6 py-4 flex items-center min-h-[52px]">
                   {typeof row.square === "boolean" ? (
-                    row.square ? (
-                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
-                        <Check
-                          className="w-4 h-4 text-zinc-600"
-                          weight="bold"
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100">
-                        <X className="w-4 h-4 text-zinc-400" weight="bold" />
-                      </div>
-                    )
+                    <BooleanCell value={row.square} />
                   ) : (
-                    <span className="text-sm font-normal text-zinc-700">
-                      {row.square}
-                      {row.squareNote && (
-                        <sup className="text-zinc-500 ml-0.5 text-[11px] font-normal">
-                          {row.squareNote}
-                        </sup>
-                      )}
-                    </span>
+                    <TextCell value={row.square} note={row.squareNote} />
                   )}
                 </div>
               </motion.div>
